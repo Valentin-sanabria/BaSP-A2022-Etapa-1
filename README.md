@@ -1,12 +1,20 @@
 ﻿# Welcome to Trackgenix official web page!
 
-# What is TrackGenix❓
+## Wait, what is TrackGenix❓
 Trackgenix is a revolutionary system designed by GigaTech Software Solutions SA.  
 
 This system does all the work for you regarding project management, schedule flow, building work teams, work traceability and much more. It was first launched in late 2021, and swiftly became one of the most requested services in all of the million-dollar South American productivity industry.
 
 # Files 📄
-At the moment, this project only contains a single HTML file, and an images folder. Later on i'll work on the CSS, JS and more. 
+At the moment, this project only contains a single *****HTML** file***, and an ***images folder***. Later on i'll work on the CSS, JS and more. 
+
+If you are interested in downloading this repository with all it's files *( including images! )* here is the line of code for importing it straight to your desktop using Git:
+
+     git clone https://github.com/Valentin-sanabria/BaSP-A2022-Etapa-1.git
+
+ Or this one if you are using Github client! :)
+
+     gh repo clone Valentin-sanabria/BaSP-A2022-Etapa-1
 
 # Current  progress 👨🏻‍💻👨🏼‍💻👨🏽‍💻
 ## Week 01 ✔
