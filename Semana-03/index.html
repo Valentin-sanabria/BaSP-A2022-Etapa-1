@@ -6,49 +6,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TrackGenix official web</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+
+
     </head>
 
     <body>
 
         <header>
-            <img src="/imgs/LOGO-RR 3.png" alt="">
+            <img src="/imgs/LOGO-RR 3.png" class="rrLogo" alt="logo">
             <h1>Trackgenix</h1>
 
             <nav>
-                <img src="imgs/Hamburger_icon.svg.png" alt="">
-                <a href="features.html">Features</a>
-                <a href="why-trackgenix.html">Why you should use Trackgenix</a>
-                <a href="history.html">History</a>
-                <a href="products.html">Products</a>
-                <a href="about-us.html">About us</a>
-                <a href="support.html">Support</a>
-            </nav>       
+                <img src="imgs/Hamburger_icon.svg.png" id="burgerIcon" alt="">
+                <button class="navButton" > <a class="navButtonText" href="features.html">Features</a> </button>
+                <button class="navButton"> <a class="navButtonText" href="why-trackgenix.html">Why you should use Trackgenix</a> </button>
+                <button class="navButton"> <a class="navButtonText" href="history.html">History</a> </button> 
+                <button class="navButton">  <a class="navButtonText" href="products.html">Products</a> </button>
+                <button class="navButton"> <a class="navButtonText" href="about-us.html">About us</a> </button> 
+                <button class="navButton"> <a class="navButtonText"href="support.html">Support</a> </button> 
+            </nav>
         </header>
 
+
+
         <aside>
-            <input type="text" name="" id="" placeholder="Search...">
-            <a href="index.html">Menu</a>
-            <a href="sign-up.html">Sign up</a>
-            <a href="log-in.html">Log in</a>
-            <a href="contact-info.html">Contact information</a>
-            <img src="/imgs/LOGO-RR 3.png" alt="">
-            <p>
-                Developed by GigaTech Software Solutions S.A.
-            </p>
+
+            <div>
+                <input type="text" name="" id="" placeholder="Search...">
+                <p>Menu</p> 
+                <button class="asideButton"> <a href="sign-up.html">Home</a> </button> 
+                <button class="asideButton"> <a href="sign-up.html">Sign up</a> </button> 
+                <button class="asideButton"> <a href="log-in.html">Log in</a> </button> 
+                <button class="asideButton"> <a href="contact-info.html">Contact information</a> </button> 
+                <img src="/imgs/LOGO-RR 3.png" class="rrLogo" alt="">
+                <p>
+                    Developed by GigaTech Software Solutions S.A.
+                </p>
+            </div>
+
         </aside>
 
         <main>
-            <section>
-                <h2>
-                    Welcome
-                </h2>
-                <p>
+            <section id="section1">
+
+                <div id="welcomeDiv">
+                    <p id="welcome">
+                        Welcome
+                    </p>
+                </div>
+
+                <p id="projectDescription">
                     “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA.
                     This system will allow them to efficiently manage their proyects, schedule flow, selected work teams and
                     much more
                 </p>
-                <img src="imgs/Rectangle 2.png" alt="">
+                <img src="imgs/Rectangle 2.png" alt="article photo">
             </section>
+        <div id="hidden">
 
             <section>
                 <h3>
@@ -73,9 +90,9 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Why should you use Trackgenix?
-                </h3>
+                </p>
                 <p>
                     Productivity Booster
                 </p>
@@ -109,9 +126,9 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Inscription Form
-                </h3>
+                </p>
                 <form action=""></form>
                 <input type="text" placeholder="Name">
                 <input type="text" placeholder="Email">
@@ -131,9 +148,9 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Company's Mission
-                </h3>
+                </p>
                 <p>
                     Where we started ; Where we are headed
                 </p>
@@ -172,13 +189,13 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Our Products
-                </h3>
+                </p>
                 <img src="imgs/ourProducts.png" alt="">
-                <h4>
+                <p>
                     Employee time control from any place and device
-                </h4>
+                </p>
                 <p>
                     A single app for recording the day for any situation:
                 </p>
@@ -190,9 +207,9 @@
 
                 </ul>
                 <img src="imgs/ourProducts2.png" alt="">
-                <h4>
+                <p>
                     Customized working day registration policies
-                </h4>
+                </p>
                 <p>
                     Customize the mandatory registration of the working day with a completely flexible app to clock in at
                     work.
@@ -204,9 +221,9 @@
                     <li>Flexible entry and exit</li>
                 </ul>
                 <img src="imgs/ourProducts3.png" alt="">
-                <h4>
+                <p>
                     The most intuitive time control app
-                </h4>
+                </p>
                 <p>
                     Registration of the day from anywhere to promote teleworking and self-management of time.
                 </p>
@@ -216,9 +233,9 @@
                     <li>Instant notifications and alerts</li>
                 </ul>
                 <img src="imgs/ourProducts4.png" alt="">
-                <h4>
+                <p>
                     Project management done well
-                </h4>
+                </p>
                 <p>
                     Advanced controls and features to effortlessly control all your projects.
                 </p>
@@ -229,29 +246,29 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Company
-                </h3>
+                </p>
                 <img src="imgs/image 22.png" alt="">
-                <h4>
+                <p>
                     GigaTech Software Solutions SA building.
-                </h4>
+                </p>
                 <p>
                     Trackgenix is a HR software company that streamlines human resource management for clients in more than
                     1200 cities around the world.
                 </p>
-                <h4>
+                <p>
                     An inclusive workplace for everyone
-                </h4>
+                </p>
                 <img src="imgs/image 24.png" alt="">
                 <p>
                     Get to know our team and our offices and join us in our leap towards better human resources management.
                     Learn how companies from all sectors already manage talent in a more efficient and humane way with our
                     human resources software.
                 </p>
-                <h4>
+                <p>
                     Our workplace, our world
-                </h4>
+                </p>
                 <img src="imgs/image 23.png" alt="">
                 <p>
                     Trackgenix was created remotely in 2008 by Yves Hiernaux and Mic Cvilic after many years of working with
@@ -261,9 +278,9 @@
             </section>
 
             <section>
-                <h3>
+                <p>
                     Support
-                </h3>
+                </p>
                 <img src="imgs/image 25.png" alt="">
                 <p>
                     Phone call or Video conference support from 8am to 4pm everyday
@@ -272,9 +289,9 @@
                 <p>
                     24h support by online chat bot
                 </p>
-                <h4>
+                <p>
                     Tutorials
-                </h4>
+                </p>
                 <ol>
                     <li>“TrackGenix: Quick Start Guide” 5:10</li>
                     <li>“How to set up TrackGenix for your company: In-depth guide” 31:02</li>
@@ -312,6 +329,9 @@
             </p>
         </footer>
 
-</body>
+                    
+    </div>
+    </body>
+
 
 </html>
