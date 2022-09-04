@@ -1205,3 +1205,284 @@ color: #000000;
     text-align: left;
     width: 385px;
 }
+
+#section7 {
+
+    position: absolute;
+    top: 6292px;
+    left: 253px;
+    width: 1259px;
+    height: 782px;
+ 
+
+}
+
+#sectionTitle7 {
+
+        
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: underline 2px solid;
+    color: #000000;
+    margin-left: 100px;
+    margin-bottom: 30px;
+
+}
+#section7 img {
+
+    width: 477px;
+height: 304px;
+}
+
+#subtitle10 {
+    position: absolute;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+width: 639px;
+height: 53px;
+left: 580px;
+top: 85px;
+
+}
+
+#paragraph7 {
+    position: absolute;
+    font-family: 'Roboto';
+
+font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+width: 470px;
+left: 580px;
+top: 150px;
+}
+
+#imgLeft1 {
+    position: absolute;
+    left: 50px;
+}
+
+#subtitle11 {
+    position: absolute;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+width: 639px;
+height: 53px;
+left: 200px;
+top: 420px;
+
+}
+
+#paragraph8 {
+    position: absolute;
+    font-family: 'Roboto';
+text-align: right;
+font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+width: 520px;
+left: 100px;
+top: 480px;
+}
+
+#imgRight {
+
+    position: absolute;
+    top: 358px;
+    left: 690px;
+}
+
+
+#subtitle12 {
+    position: absolute;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+width: 639px;
+height: 53px;
+left: 580px;
+top: 750px;
+
+}
+
+#paragraph9 {
+    position: absolute;
+    font-family: 'Roboto';
+
+font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+width: 470px;
+left: 580px;
+top: 800px;
+}
+
+#imgLeft2 {
+    position: absolute;
+    top: 720px;
+    left: 50px;
+}
+
+#section8 {
+
+    position: absolute;
+    top: 7300px;
+    left: 253px;
+    width: 1259px;
+    height: 782px;
+ 
+
+}
+
+
+#sectionTitle8 {
+
+    position: absolute;
+    top: 167px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: underline 2px solid;
+    color: #000000;
+    margin-left: 100px;
+    margin-bottom: 30px;
+
+}
+#section8 img {
+
+    width: 477px;
+    height: 304px;
+    position: absolute;
+    top: 256px;
+}
+
+#subtitle13 {
+    position: absolute;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+text-align: center;
+line-height: 31px;
+width: 448px;
+height: 69px;
+left: 92px;
+top: 575px;
+
+}
+
+#imgLeft3 {
+    position: absolute;
+    top: 720px;
+    left: 50px;
+}
+
+#subtitle14 {
+    position: absolute;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+text-align: center;
+line-height: 31px;
+width: 371px;
+height: 47px;
+left: 745px;
+top: 575px;
+
+}
+
+#imgRight2 {
+
+    position: absolute;
+    top: 720px;
+    left: 690px;
+}
+
+#sectionTitle9 {
+    position: absolute;
+    top: 750px;
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    margin-left: 100px;
+    margin-bottom: 30px;
+
+}
+
+#section8 ol {
+
+    position: absolute;
+    top: 800px;
+    left: 160px;    
+    width: 950px;
+    list-style: decimal;
+}
+
+#section8 ol li {
+
+    font-family: 'roboto';
+font-style: italic;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+}
+
+#section8 ol li span {
+position: absolute;
+right: 0;
+font-style: italic;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+
+color: #1D22EC;
+}
+
+#section8 button {
+    position: absolute;
+    top: 1080px;
+    left: 390px;
+    width: 480px;
+height: 116px;
+    background: #98220D;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+#section8 button a {
+
+text-decoration: none;
+font-family: 'roboto';
+font-style: italic;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+
+color: #FFFFFF;
+}
+
+footer div{
+    position: absolute;
+    bottom: 0;
+    left: 250px;  
+        z-index: 1000;
+    width: 1263px;
+    background: #373867;
+}
