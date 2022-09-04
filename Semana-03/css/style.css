@@ -166,7 +166,7 @@ color: #373867;
     top: 146px;
     width: 1368px;
     height: 782px;
-    background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%, rgba(222, 239, 240, 0.86) 18.75%, rgba(229, 242, 244, 0.86) 35.94%, rgba(203, 228, 216, 0.1118) 58.33%, rgba(255, 255, 255, 0) 83.85%); 
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%,  rgba(229, 242, 244, 0.86) 35%, rgba(203, 228, 216, 0.1118) 58%, rgba(255, 255, 255, 0) 83%); 
 }
 
 #welcomeDiv {
@@ -177,7 +177,7 @@ width: 307px;
 height: 81px;
 left: 474px;
 top: 103px;
-
+filter: blur(3px);
 background-color: rgba(170, 206, 155, 0.53);
 border: 2px solid #000000;
 border-radius: 20px;
@@ -186,11 +186,13 @@ align-content: center;
 }
 
 
-#welcomeDiv p {
+#welcome {
 
+    position: absolute;
     justify-content: center;
     text-align: center;
-
+    left: 512px;
+    top: 110px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -425,7 +427,7 @@ color: #373867;
 
 
 position: absolute;
-width: 140px;
+width: 291px;
 height: 28px;
 left: 426px;
 top: 294px;
@@ -448,13 +450,32 @@ color: #373867;
     top: 350px;
 }
 
+#description1 {
+
+    position: absolute;
+width: 364px;
+height: 140px;
+left: 447px;
+top: 376px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+
+color: #373867;
+}
+
 
 #subtitle6 {
 
 
     position: absolute;
-    width: 140px;
-    height: 28px;
+    width: 230px;
+    height: 29px;
     left: 1044px;
     top: 289px;
     
@@ -476,14 +497,34 @@ color: #373867;
      top: 358px;
 }
 
+#description2 {
+
+    position: absolute;
+    width: 364px;
+    height: 140px;
+    left: 1066px;
+    top: 376px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+
+color: #373867;
+}
+
+
 #subtitle7 {
 
 
     position: absolute;
-    width: 316px;
-    height: 26px;
+    width: 260px;
+    height: 65px;
     left: 426px;
-    top: 571px;
+    top: 571px;    
     
     
     font-family: 'Roboto';
@@ -491,7 +532,7 @@ color: #373867;
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
-    text-align: center;
+
     
     color: #373867;
     }
@@ -503,14 +544,34 @@ color: #373867;
      top: 634px;
 }
 
+#description3 {
+
+    position: absolute;
+    width: 364px;
+    height: 159px;
+    left: 447px;
+    top: 690px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+
+color: #373867;
+}
+
+
 #subtitle8 {
 
 
     position: absolute;
-    left: 1048px;
-    top: 580px;;
-    width: 199px;
+    width: 230px;
     height: 26px;
+    left: 1048px;
+    top: 580px;
     
     font-family: 'Roboto';
     font-style: normal;
@@ -527,4 +588,169 @@ color: #373867;
      position: absolute;
      left: 897px;
      top: 636px;
+}
+
+#description4 {
+
+    position: absolute;
+    width: 364px;
+    height: 140px;
+    left: 1069px;
+    top: 684px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+
+color: #373867;
+}
+
+#section4 {
+
+
+    position: absolute;
+    top: 2946px;
+    left: 253px;
+    width: 1368px;
+    height: 782px;
+}
+
+#sectionTitle3 {
+
+    position: absolute;
+width: 178px;
+height: 28px;
+left: 100px;
+top: 62px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+
+#inputName {
+
+position: absolute;
+height: 37px;
+width: 450px;
+left: 4%;
+right: 51.59%;
+top: 160px;
+
+/* Grayish Navy - Primary color */
+
+border: 1px solid #373867;
+border-radius: 4px;
+}
+
+#inputMail {
+
+    position: absolute;
+    height: 37px;
+    width: 450px;
+left: 47%;
+right: 3.37%;
+top: 160px;
+
+
+
+border: 1px solid #373867;
+border-radius: 4px;
+
+}
+
+#inputContact {
+    position: absolute;
+    height: 37px;
+    width: 1025px;
+    left: 4%;
+top: 240px;
+
+}
+
+#check1 {
+
+    position: absolute;
+    left: 12%;
+    top: 43.5%;
+
+}
+
+#checkText1 {
+
+    position: absolute;
+    left: 15%;
+    top: 44%;
+
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    
+    color: #000000;
+}
+
+#check2 {
+
+    position: absolute;
+    left: 50%;
+    top: 43.5%;
+
+}
+
+#checkText2 {
+
+    position: absolute;
+    left: 52%;
+    top: 44%;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    
+    color: #000000;
+}
+
+#inputText {
+
+    position: absolute;
+
+    left: 4%;
+    top: 450px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    
+    color: #000000;
+}
+
+#inputTextArea {
+
+    position: absolute;
+    width: 1050px;
+    height: 250px;
+    left: 4%;
+    top: 500px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
 }
