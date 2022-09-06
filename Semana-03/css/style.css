@@ -45,8 +45,8 @@ header {
     position: fixed;
     height: 55px;
     width: 1260px;
-    left: 253px;
-    top: 90px;
+    left: 252px;
+    top: 84px;
     z-index: 100;
   }
   
@@ -85,20 +85,22 @@ header {
   }
   
   .searchIcon {       
+    height: 26px;
+    border-radius: 3.5px;
+    border: 2px solid #444;
     background: url(/imgs/search-icon.jpeg) no-repeat right;
+    background-color: whitesmoke;
   }
 
   .asideButton {
-    position: relative;
+    padding: 12px 0px 12px 0px;
     width: 142px;
-    height: 43px;
     background: rgba(55, 56, 103, 0);
     border: none;
     border-bottom: 1px solid black;
   }
   
   .asideButton a {
-    margin: 10px;
     font-family: "Roboto";
     font-size: 16px;
     text-decoration: none;
@@ -107,11 +109,6 @@ header {
   
   aside input {
     margin: 22px;
-  }
-  
-  aside div {
-    position: relative;
-    height: 1000px;
   }
   
   .asideText {
@@ -143,7 +140,7 @@ header {
     width: 1259px;
     height: 782px;
     margin-left: 253px;
-    top: 146px;
+    top: 140px;
     background: linear-gradient(
       180deg,
       rgba(222, 239, 241, 0.86) 0%,
@@ -180,7 +177,7 @@ header {
     position: absolute;
     width: 546px;
     height: 450px;
-    left: 134px;
+    left: 110px;
     top: 330px;
     font-family: "Roboto";
     font-size: 28.8453px;
@@ -192,7 +189,7 @@ header {
     position: absolute;
     width: 500px;
     height: 272px;
-    left: 725px;
+    left: 715px;
     top: 313px;
     border: 0.75px solid #000000;
   }
@@ -548,6 +545,8 @@ header {
     width: 999px;
     left: 90px;
     top: 250px;
+    border: 1px solid #373867;
+    border-radius: 4px;
   }
   
   #check1 {
@@ -597,6 +596,8 @@ header {
     top: 500px;
     font-family: "Roboto";
     font-size: 14px;
+    border: 1px solid #373867;
+    border-radius: 4px;
   }
   
   .sectionDivider4 {
@@ -742,18 +743,17 @@ header {
     font-style: italic;
     font-weight: 100;
     font-size: 17px;
-    color: rgba(0, 0, 0, 0.8);
   }
 
   .blackText {
     position: absolute;
-    height: 20px;
-    left: 900px;
-    top: 70px;
+    left: 890px;
+    top: 65px;
     font-family: "Roboto";
+    font-weight: 700;
     font-style: italic;
-    font-size: 17px;
-    color: rgb(121, 52, 52);
+    font-size: 18px;
+    color: rgb(58, 54, 54);
   }
   
   .aboutUs {
