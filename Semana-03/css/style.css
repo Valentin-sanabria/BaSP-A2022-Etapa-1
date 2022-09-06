@@ -1,3 +1,7 @@
+body{ 
+  width: 1512px;
+  box-sizing: border-box;
+}
 header {
     position: fixed;
     width: 1512px;
@@ -80,6 +84,10 @@ header {
     z-index: 98;
   }
   
+  .searchIcon {       
+    background: url(/imgs/search-icon.jpeg) no-repeat right;
+  }
+
   .asideButton {
     position: relative;
     width: 142px;
@@ -92,7 +100,6 @@ header {
   .asideButton a {
     margin: 10px;
     font-family: "Roboto";
-  
     font-size: 16px;
     text-decoration: none;
     color: #479679;
@@ -112,9 +119,7 @@ header {
     margin-bottom: 12px;
     left: 10px;
     top: 470px;
-  
     font-family: "Roboto";
-  
     font-size: 11px;
   }
   
@@ -128,19 +133,17 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Roboto";
-  
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
     color: #373867;
   }
   #section1 {
-    position: absolute;
+    position: relative;
     width: 1259px;
     height: 782px;
-    left: 253px;
+    margin-left: 253px;
     top: 146px;
-  
     background: linear-gradient(
       180deg,
       rgba(222, 239, 241, 0.86) 0%,
@@ -168,7 +171,6 @@ header {
     left: 512px;
     top: 110px;
     font-family: "Roboto";
-  
     font-size: 49px;
     text-transform: uppercase;
     color: #373867;
@@ -181,7 +183,6 @@ header {
     left: 134px;
     top: 330px;
     font-family: "Roboto";
-  
     font-size: 28.8453px;
     line-height: 41px;
     color: #373867;
@@ -206,9 +207,11 @@ header {
   }
   
   #section2 {
-    position: absolute;
-    left: 120px;
-    top: 900px;
+    position: relative;
+    height: 1000px;
+    width: 1250px;
+    margin-left: 230px;
+    top: 120px;
   }
   
   #section2 img {
@@ -223,8 +226,8 @@ header {
     position: absolute;
     width: 386px;
     height: 47px;
-    left: 267px;
-    top: 130px;
+    left: 150px;
+    top: 100px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 40px;
@@ -235,7 +238,7 @@ header {
     position: absolute;
     width: 140px;
     height: 28px;
-    left: 359px;
+    left: 270px;
     top: 231px;
     font-family: "Roboto";
     font-weight: 700;
@@ -245,7 +248,7 @@ header {
   
   .img1 {
     position: absolute;
-    left: 309px;
+    left: 220px;
     top: 283px;
   }
   
@@ -253,7 +256,7 @@ header {
     position: absolute;
     width: 140px;
     height: 28px;
-    left: 1050px;
+    left: 950px;
     top: 230px;
     font-family: "Roboto";
     font-weight: 700;
@@ -263,7 +266,7 @@ header {
   
   .img2 {
     position: absolute;
-    left: 977px;
+    left: 880px;
     top: 289px;
   }
   
@@ -271,7 +274,7 @@ header {
     position: absolute;
     width: 316px;
     height: 26px;
-    left: 270px;
+    left: 180px;
     top: 580px;
     font-family: "Roboto";
     font-weight: 700;
@@ -281,7 +284,7 @@ header {
   
   .img3 {
     position: absolute;
-    left: 311px;
+    left: 220px;
     top: 635px;
   }
   
@@ -289,7 +292,7 @@ header {
     position: absolute;
     width: 199px;
     height: 26px;
-    left: 1010px;
+    left: 910px;
     top: 580px;
     font-family: "Roboto";
     font-weight: 700;
@@ -299,7 +302,7 @@ header {
   
   .img4 {
     position: absolute;
-    left: 977px;
+    left: 880px;
     top: 635px;
   }
   
@@ -314,15 +317,17 @@ header {
   }
   
   #section3 {
-    position: absolute;
-    top: 1964px;
-    left: 120px;
+    position: relative;
+    height: 900px;
+    width: 1250px;
+    top: 150px;
+    margin-left: 220px;
   }
   
   .sectionTitle2 {
     position: absolute;
     width: 1000px;
-    left: 470px;
+    left: 370px;
     top: 100px;
     font-family: "Roboto";
     font-weight: 700;
@@ -334,8 +339,8 @@ header {
     position: absolute;
     width: 291px;
     height: 28px;
-    left: 426px;
-    top: 294px;
+    left: 320px;
+    top: 289px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 30px;
@@ -346,7 +351,7 @@ header {
     position: absolute;
     width: 125px;
     height: 131px;
-    left: 275px;
+    left: 150px;
     top: 345px;
     background: rgba(170, 206, 155, 0.3);
     transform: rotate(45deg);
@@ -354,7 +359,7 @@ header {
   
   #img5 {
     position: absolute;
-    left: 277px;
+    left: 150px;
     top: 350px;
   }
   
@@ -362,10 +367,9 @@ header {
     position: absolute;
     width: 290px;
     height: 140px;
-    left: 447px;
+    left: 320px;
     top: 376px;
     font-family: "Roboto";
-  
     font-size: 20px;
     color: #373867;
   }
@@ -374,7 +378,7 @@ header {
     position: absolute;
     width: 230px;
     height: 29px;
-    left: 1044px;
+    left: 930px;
     top: 289px;
     font-family: "Roboto";
     font-weight: 700;
@@ -386,7 +390,7 @@ header {
     position: absolute;
     width: 125px;
     height: 131px;
-    left: 895px;
+    left: 780px;
     top: 345px;
     background: rgba(170, 206, 155, 0.3);
     transform: rotate(45deg);
@@ -394,7 +398,7 @@ header {
   
   .img6 {
     position: absolute;
-    left: 916px;
+    left: 805px;
     top: 358px;
   }
   
@@ -402,10 +406,9 @@ header {
     position: absolute;
     width: 270px;
     height: 140px;
-    left: 1066px;
+    left: 940px;
     top: 376px;
     font-family: "Roboto";
-  
     font-size: 20px;
     color: #373867;
   }
@@ -414,7 +417,7 @@ header {
     position: absolute;
     width: 260px;
     height: 65px;
-    left: 440px;
+    left: 320px;
     top: 571px;
     font-family: "Roboto";
     font-weight: 700;
@@ -424,8 +427,8 @@ header {
   
   .imgBackground3 {
     position: absolute;
-    left: 275px;
-    top: 625px;
+    left: 148px;
+    top: 650px;
     background: rgba(170, 206, 155, 0.3);
     width: 125px;
     height: 131px;
@@ -434,15 +437,15 @@ header {
   
   .img7 {
     position: absolute;
-    left: 287px;
-    top: 634px;
+    left: 160px;
+    top: 650px;
   }
   
   .description3 {
     position: absolute;
     width: 370px;
     height: 159px;
-    left: 447px;
+    left: 320px;
     top: 690px;
     font-family: "Roboto";
     font-size: 20px;
@@ -454,8 +457,8 @@ header {
     position: absolute;
     width: 230px;
     height: 26px;
-    left: 1048px;
-    top: 580px;
+    left: 930px;
+    top: 600px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 30px;
@@ -466,7 +469,7 @@ header {
     position: absolute;
     width: 125px;
     height: 131px;
-    left: 895px;
+    left: 780px;
     top: 625px;
     background: rgba(170, 206, 155, 0.3);
     transform: rotate(45deg);
@@ -474,7 +477,7 @@ header {
   
   .img8 {
     position: absolute;
-    left: 897px;
+    left: 785px;
     top: 636px;
   }
   
@@ -482,7 +485,7 @@ header {
     position: absolute;
     width: 250px;
     height: 140px;
-    left: 1069px;
+    left: 940px;
     top: 684px;
     font-family: "Roboto";
     font-size: 20px;
@@ -500,11 +503,11 @@ header {
   }
   
   #section4 {
-    position: absolute;
-    width: 1259px;
-    height: 782px;
-    top: 2946px;
-    left: 253px;
+    position: relative;
+    width: 1159px;
+    height: 900px;
+    top: 240px;
+    margin-left: 280px;
   }
   
   .sectionTitle3 {
@@ -607,11 +610,11 @@ header {
   }
   
   #section5 {
-    position: absolute;
+    position: relative;
     width: 1259px;
-    height: 782px;
-    top: 3880px;
-    left: 253px;
+    height: 1000px;
+    margin-top: 240px;
+    margin-left: 253px;
     background: linear-gradient(
       180deg,
       rgba(222, 239, 241, 0.86) 0%,
@@ -626,7 +629,7 @@ header {
     width: 210px;
     height: 28px;
     left: 44px;
-    top: 38px;
+    top: 45px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 20px;
@@ -638,7 +641,7 @@ header {
     width: 885px;
     height: 42px;
     left: 50px;
-    top: 94px;
+    top: 104px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 36px;
@@ -655,7 +658,7 @@ header {
     width: 885px;
     height: 42px;
     left: 455px;
-    top: 94px;
+    top: 104px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 36px;
@@ -671,7 +674,7 @@ header {
     width: 722px;
     height: 52px;
     left: 270px;
-    top: 190px;
+    top: 200px;
     font-family: "Roboto";
     font-style: italic;
     font-weight: 600;
@@ -685,7 +688,7 @@ header {
     width: 936px;
     height: 90px;
     left: 150px;
-    top: 237px;
+    top: 250px;
     font-family: "Roboto";
     font-size: 20px;
     line-height: 30px;
@@ -696,25 +699,14 @@ header {
   .section5img {
     position: absolute;
     left: 820px;
-    top: 650px;
+    top: 660px;
   }
   
   #logoCompany {
     position: absolute;
     width: 100px;
     left: 1080px;
-    top: 25px;
-  }
-  
-  .blackText {
-    position: absolute;
-    height: 20px;
-    left: 900px;
-    top: 55px;
-    font-family: "Roboto";
-    font-style: italic;
-    font-size: 17px;
-    color: rgba(0, 0, 0);
+    top: 50px;
   }
   
   .quoteTitle {
@@ -752,6 +744,17 @@ header {
     font-size: 17px;
     color: rgba(0, 0, 0, 0.8);
   }
+
+  .blackText {
+    position: absolute;
+    height: 20px;
+    left: 900px;
+    top: 70px;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 17px;
+    color: rgb(121, 52, 52);
+  }
   
   .aboutUs {
     position: absolute;
@@ -788,11 +791,11 @@ header {
   }
   
   #section6 {
-    position: absolute;
+    position: relative;
     width: 1259px;
-    height: 782px;
-    top: 4910px;
-    left: 253px;
+    height: 1282px;
+    margin-top: 50px;
+    margin-left: 253px;
   }
   
   #section6 img {
@@ -816,6 +819,7 @@ header {
     position: absolute;
     width: 195px;
     height: 36px;
+    top: 55px;
     left: 75px;
     font-family: "Roboto";
     font-weight: 700;
@@ -833,7 +837,7 @@ header {
   }
   
   .paragraph3 {
-    width: 385px;
+
     font-size: 16px;
     font-family: "Roboto";
     margin-top: 40px;
@@ -956,11 +960,11 @@ header {
   }
   
   #section7 {
-    position: absolute;
+    position: relative;
     width: 1259px;
-    height: 782px;
-    top: 6292px;
-    left: 253px;
+    height: 1100px;
+    margin-top: 110px;
+    margin-left: 253px;
   }
   
   .sectionTitle7 {
@@ -1070,18 +1074,18 @@ header {
   }
   
   #section8 {
-    position: absolute;
+    position: relative;
     width: 1259px;
-    height: 782px;
-    top: 7300px;
-    left: 253px;
+    height: 1150px;
+    margin-top: 30px;
+    margin-left: 253px;
   }
   
   .sectionTitle8 {
     position: absolute;
     margin-left: 100px;
     margin-bottom: 30px;
-    top: 167px;
+    top: 67px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 30px;
@@ -1093,7 +1097,7 @@ header {
     position: absolute;
     width: 477px;
     height: 304px;
-    top: 256px;
+    top: 156px;
   }
   
   .subtitle13 {
@@ -1101,7 +1105,7 @@ header {
     width: 448px;
     height: 69px;
     left: 92px;
-    top: 575px;
+    top: 475px;
     font-family: "Roboto";
     font-size: 23px;
     text-align: center;
@@ -1110,7 +1114,7 @@ header {
   
   .imgLeft3 {
     position: absolute;
-    top: 720px;
+    top: 620px;
     left: 50px;
   }
   
@@ -1119,7 +1123,7 @@ header {
     width: 371px;
     height: 47px;
     left: 745px;
-    top: 575px;
+    top: 475px;
     font-family: "Roboto";
     font-size: 23px;
     text-align: center;
@@ -1128,7 +1132,7 @@ header {
   
   .imgRight2 {
     position: absolute;
-    top: 720px;
+    top: 620px;
     left: 690px;
   }
   
@@ -1136,7 +1140,7 @@ header {
     position: absolute;
     margin-left: 100px;
     margin-bottom: 30px;
-    top: 750px;
+    top: 650px;
     font-family: "Roboto";
     font-style: italic;
     font-weight: 700;
@@ -1146,7 +1150,7 @@ header {
   #section8 ol {
     position: absolute;
     width: 950px;
-    top: 800px;
+    top: 700px;
     left: 160px;
     list-style: decimal;
   }
@@ -1173,7 +1177,7 @@ header {
     position: absolute;
     width: 480px;
     height: 116px;
-    top: 1080px;
+    top: 980px;
     left: 390px;
     background: #98220d;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
@@ -1190,10 +1194,10 @@ header {
   }
   
   footer div {
-    position: absolute;
+    position: relative;
     width: 1263px;
-    top: 8700px;
-    left: 250px;
+    margin-top: 20px;
+    margin-left: 250px;
     background: #373867;
   }
   
@@ -1208,7 +1212,7 @@ header {
   .footerText {
     position: absolute;
     margin: 50px;
-    top: 8855px;
+    top: 8755px;
     left: 590px;
     font-size: 22px;
     text-align: center;

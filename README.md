@@ -23,7 +23,7 @@ In the first week I was assigned a work-team, and we had to do all the UI of the
  - [x] Quick sketch
  - [x]  Design web page on Figma
 
-## Week 02 🕑
+## Week 02 ✔
 
 In the second week, I started programming the structure of the landing page utilizing HTML. Not only that, I made my best to fulfill the good practice tips we were given and also worked by the rules our advisors set, like avoiding the use of divs, classes, and other style-driven decisions.
 
@@ -31,4 +31,14 @@ In the second week, I started programming the structure of the landing page util
  - [x] Upload to Github
  - [x] Correct indentation
  - [x] Create and upload the project's README.md file
+
+## Week 03 🕑
+
+In the third week, I started coding the styling of the web page. We had to create the whole CSS file for the landing page. I made my best to fulfill the good practice tips we were given like the use of camelCase for naming classes and IDs, and also worked by the rules our advisors set, like avoiding the use of flexbox.
+
+ - [x] CSS Structure
+ - [x] 🤕Avoid flexbox🤕
+ - [x] Upload to Github
+ - [x] Correct indentation
+ - [x] Update project's README.md file
 
