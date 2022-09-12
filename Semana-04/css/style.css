@@ -1,0 +1,19 @@
+*, body {
+  font-family: 'Roboto';
+  box-sizing: border-box;
+  margin: 0;
+  color: #373867;
+}
+body{
+  padding-top: 91px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.showTablet {
+  display: none;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
