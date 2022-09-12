@@ -1,0 +1,27 @@
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.headerContainer {
+  display: flex;
+  height: 91px;
+  justify-content: space-between;
+  padding: 0px 12px;
+  align-items: center;
+  background-color: rgba(55, 56, 103, 1);
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgba(70, 160, 123, 1);
+}
+.rrLogo {
+  width: 65px;
+  height: 65px;
+}
