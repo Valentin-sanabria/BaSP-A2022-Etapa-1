@@ -32,7 +32,7 @@ In the second week, I started programming the structure of the landing page util
  - [x] Correct indentation
  - [x] Create and upload the project's README.md file
 
-## Week 03 🕑
+## Week 03 ✔
 
 In the third week, I started coding the styling of the web page. We had to create the whole CSS file for the landing page. I made my best to fulfill the good practice tips we were given like the use of camelCase for naming classes and IDs, and also worked by the rules our advisors set, like avoiding the use of flexbox.
 
@@ -42,3 +42,13 @@ In the third week, I started coding the styling of the web page. We had to creat
  - [x] Correct indentation
  - [x] Update project's README.md file
 
+## Week 04 🕑
+
+In the fourth week, we kept working on the styling of the web page. We have to create a specific .CSS file for each component of the landing page (for ex. nav, footer, main, etc). Luckily, we are able to use Flexbox this week as well as incentivized to use justify-content and align-items. We also need to make the web responsive, by utilizing not only Flexbox but also media-queries, which are extremely useful for hiding and showing HTML elements.
+
+ - [x] Specific CSS file per element Structure
+ - [x] 🥳Use of flexbox🥳
+ - [x] Add and use media-queries
+ - [x] Upload  progress to Github
+ - [x] Correct indentation
+ - [x] Update project's README.md file
