@@ -17,3 +17,98 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width: 768px) {
+    html{
+        font-size: 18px;
+   }
+    .showTablet {
+        display: flex;
+   }
+    .hideTablet {
+        display: none;
+   }
+    .invisibleTablet {
+        visibility: hidden;
+   }
+    .margin30 {
+        margin-left: min(25%, 320px);
+   }
+    body{
+        padding-top: 141px;
+   }
+    .input {
+        width: 40%;
+   }
+    .inputcontact {
+        width: 81.5%;
+   }
+    .description {
+        max-width: 520px;
+   }
+    .purpleUnderline {
+        display: inline;
+        font-size: 1.2rem;
+   }
+    .greenUnderline {
+        display: inline;
+        font-size: 1.2rem;
+   }
+    .toRight {
+        align-items: flex-end;
+   }
+}
+@media (min-width: 1200px) {
+    html{
+        font-size: 20px;
+   }
+    .wrapPC {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+   }
+    .product {
+        width: 40%;
+   }
+    .support {
+        margin: 50px 0px;
+   }
+    .securityText {
+        display: flex;
+        flex-direction: row;
+   }
+    .securityText .paragraph{
+        width: 68%;
+        margin-right: 22px;
+   }
+    .companySubsection {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+   }
+    .companySubsection img {
+        margin-left: 3rem;
+        margin-right: 3rem;
+   }
+    .toRight {
+        align-items: inherit;
+   }
+    .toRight img {
+        order: 1;
+   }
+    .ourProductsDescription{
+        text-align: left;
+   }
+    .section3subsection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+   }
+    .whyTrackgenixSubsection {
+        width: 45%;
+   }
+    .welcomeSubsection {
+        flex-direction: row-reverse;
+   }
+}
