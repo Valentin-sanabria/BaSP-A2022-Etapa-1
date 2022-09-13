@@ -1,0 +1,23 @@
+.footerIcons {
+  display: flex;
+  padding: 22px;
+  justify-content: space-around;
+  background-color: rgba(55, 56, 103, 1);
+}
+.footerIcons img {
+  width: 36px;
+  height: 36px;
+}
+.twitter img {
+  width: 44px;
+  height: 36px;
+}
+.footerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 28px;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 0.8rem;
+}
