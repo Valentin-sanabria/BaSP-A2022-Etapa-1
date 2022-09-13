@@ -7,10 +7,10 @@ header {
 }
 .headerContainer {
   display: flex;
-  height: 91px;
   justify-content: space-between;
-  padding: 0px 12px;
   align-items: center;
+  height: 91px;
+  padding: 0px 12px;
   background-color: rgba(55, 56, 103, 1);
 }
 h1 {

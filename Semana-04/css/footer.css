@@ -1,7 +1,7 @@
 .footerIcons {
   display: flex;
-  padding: 22px;
   justify-content: space-around;
+  padding: 22px;
   background-color: rgba(55, 56, 103, 1);
 }
 .footerIcons img {

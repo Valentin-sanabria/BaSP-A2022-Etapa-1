@@ -3,18 +3,16 @@ aside {
   flex-direction: column;
   position: fixed;
   left: 0;
-  top: 0;
-  padding: 0px 30px;
+  top: 91px;
+  padding: 70px 30px;
   height: 100vh;
   width: 25%;
   max-width: 320px;
-  justify-content: center;
   background-color: rgba(55, 56, 103, 0.1);
   z-index: 10;
 }
 aside input {
-  height: 28.55px;
-  background: #FFFFFF;
+  height: 29px;
   border-radius: 8px;
 }
 .searchIcon {
@@ -29,8 +27,8 @@ aside input {
   align-items: center;
 }
 .asideButton {
-  padding: 12px 0px 12px 0px;
   width: 142px;
+  padding: 22px 0px;
   background: rgba(55, 56, 103, 0);
   border: none;
   border-bottom: 1px solid black;
@@ -42,19 +40,19 @@ aside input {
   color: #479679;
 }
 .asideText {
-  font-size: 0.6rem;
   margin-top: 22px;
+  font-size: 0.6rem;
 }
 .logoAndTextAside {
   display: flex;
   flex-direction: column;
-  margin-top: 22px;
   align-items: center;
+  margin-top: 33px;
   text-align: center;
 }
 .menuSide {
-  margin-top: 22px;
-  margin-bottom: 10px;
+  margin-top: 36px;
+  margin-bottom: 20px;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 1.15rem;
