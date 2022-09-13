@@ -1,0 +1,357 @@
+.section1 {
+  height: 600px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 80px 0px;
+  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%, rgba(229, 242, 244, 0.86) 35%, rgba(203, 228, 216, 0.1118) 58%, rgba(255, 255, 255, 0) 83%);
+}
+.welcomeDiv {
+  display: flex;
+  width: 241px;
+  height: 64px;
+  background-color: rgba(170, 206, 155, 0.53);
+  border: 2px solid #000000;
+  border-radius: 20px;
+  align-content: center;
+}
+.welcome {
+  font-family: "Roboto";
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: auto;
+}
+.welcomeSubsection {
+  height: 80%;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+}
+.projectDescription {
+  max-width: 550px;
+  margin-right: 22px;
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.02em;
+}
+.keyboardImgSection1 {
+  width: 260px;
+  height: 145px;
+  border: 0.5px solid #000000;
+}
+.sectionDivider {
+  width: 60%;
+  height: 3px;
+  background-color: rgba(128, 128, 128, 0.281);
+  margin: 42px auto;
+}
+.section2 {
+  height: 600px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0px 40px 0px;
+}
+.sectionTitle {
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-self: center;
+  margin-bottom: 22px;
+  margin-left: 16px;
+}
+.littleText {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  color: #151515;
+  margin: 28px 0px;
+}
+.paragraphLineHeight {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.quoteTitle {
+  margin: 33px 0px 8px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.quoteDiv {
+  margin-top: 18px;
+  background: rgba(217, 217, 217, 0.2);
+  box-shadow: 0px 4px 0.5px rgba(0, 0, 0, 0.04);
+  border-radius: 7.31234px;
+}
+.quoteDiv p {
+  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
+}
+.quoteDiv .customer {
+  margin-top: 12px;
+  text-align: right;
+}
+.aboutUs {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 33px 0px 12px;
+}
+.securityText {
+  justify-content: center;
+  align-items: center;
+}
+.paragraph {
+  font-size: 0.92rem;
+}
+.securityImg {
+  width: 300px;
+  height: 208px;
+  margin-top: 22px;
+  align-self: center;
+}
+.section2 img {
+  width: 113px;
+  height: 108px;
+  margin: 10px 20px 20px 20px;
+  padding: 8px;
+  background: rgba(206, 231, 195, 0.781);
+  border-radius: 9px;
+}
+.subsectionsContainer {
+  display: flex;
+  justify-content: space-around;
+  height: 390px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.subSection {
+  width: 45%;
+  align-items: center;
+}
+.subtitle {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+}
+.hoursLog {
+  margin-left: 8px;
+}
+.section3 {
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0px 80px 0px;
+}
+.whyTrackgenixSubsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.subsectionText {
+  text-align: left;
+  max-width: 240px;
+  margin-left: 26px;
+}
+.imgBackground {
+  display: flex;
+  width: 85px;
+  height: 80px;
+  background: rgba(170, 206, 155, 0.3);
+  transform: rotate(45deg);
+  align-items: center;
+  justify-content: center;
+}
+.imgBackground img {
+  width: 60px;
+  height: 60px;
+  transform: rotate(-45deg);
+}
+.workTraceability .imgBackground {
+  align-items: initial;
+}
+.description {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.section4 {
+  padding: 20px 0px 40px 0px;
+}
+form {
+  align-items: center;
+}
+.wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.input {
+  width: 80%;
+  margin: 12px;
+  padding: 10px 12px;
+  border: 1px solid #373867;
+  border-radius: 4px;
+}
+.checkboxAndText {
+  display: flex;
+  align-items: flex-end;
+  margin: 22px 12px;
+}
+.checkText {
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+#inputTextArea {
+  width: 80%;
+  height: 300px;
+  margin-top: 22px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+}
+.section5 {
+  position: relative;
+  padding: 16px;
+  align-content: center;
+  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%, rgba(229, 242, 244, 0.86) 35%, rgba(203, 228, 216, 0.1118) 58%, rgba(255, 255, 255, 0) 83%);
+}
+.greenUnderline {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline 3px solid rgba(143, 213, 200, 1);
+}
+.purpleUnderline {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline 3px solid rgba(55, 56, 103, 1);
+}
+.section5 .rrLogo {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.section6 {
+  justify-content: center;
+  align-items: center;
+}
+.section6 img {
+  width: 333px;
+  height: 240px;
+}
+.product {
+  flex-wrap: wrap;
+  margin-top: 46px;
+  align-items: center;
+}
+.ourProductsSubtitle {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.ourProductsDescription {
+  width: 85%;
+  font-size: 1rem;
+  text-align: center;
+}
+.product ul {
+  list-style-type: disc;
+}
+.product ul li {
+  margin-top: 5px;
+  align-self: flex-start;
+  font-size: 0.8rem;
+  color: #000000;
+}
+.ulToLeft {
+  justify-content: left;
+  align-content: flex-start;
+}
+.section7 {
+  padding: 22px;
+}
+.section7 img {
+  width: 235px;
+  height: 139px;
+}
+.toRight {
+  text-align: right;
+}
+.companySubsection {
+  padding: 12px;
+}
+.companySubsectionTextImg {
+  padding: 12px;
+}
+.blackText {
+  color: #000000;
+}
+.section8 {
+  align-items: center;
+}
+.section8 img {
+  width: 295px;
+  height: 195px;
+}
+.support {
+  align-items: center;
+}
+.subtitleSupport {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 400px;
+  padding: 0px 22px;
+  margin: 22px 0px 22px 0px;
+}
+.tutorialsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.tutorialsList {
+  align-items: center;
+  list-style-type: decimal;
+}
+.tutorialsList li {
+  width: 95%;
+  max-width: 850px;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+.tutorialsList li div {
+  display: flex;
+  justify-content: space-between;
+}
+.timeStamp {
+  margin-left: 16px;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: right;
+  color: #1D22EC;
+}
+.playlistOnYTButton {
+  align-self: center;
+  width: 340px;
+  height: 82.17px;
+  margin: 66px 0px 100px 0px;
+  background: #98220D;
+  box-shadow: 0px 3px 1.5px rgba(0, 0, 0, 0.25);
+  border-radius: 21px;
+}
+.playlistOnYTButton a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 1);
+}
