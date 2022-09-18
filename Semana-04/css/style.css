@@ -19,30 +19,30 @@ body{
 }
 
 @media (min-width: 768px) {
-    html{
-        font-size: 18px;
-   }
-    .showTablet {
-        display: flex;
-   }
-    .hideTablet {
-        display: none;
-   }
-    .invisibleTablet {
-        visibility: hidden;
-   }
-    .margin30 {
-        margin-left: min(25%, 320px);
-   }
+  html{
+    font-size: 18px;
+  }
+  .showTablet {
+    display: flex;
+  }
+  .hideTablet {
+    display: none;
+  }
+  .invisibleTablet {
+    visibility: hidden;
+  }
+  .margin30 {
+    margin-left: min(25%, 320px);
+  }
 }
 @media (min-width: 1200px) {
-    html{
-        font-size: 20px;
-   }
-    .wrapPC {
-        display: flex;
-        width: 80%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-   }
+  html{
+    font-size: 20px;
+  }
+.wrapPC {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
 }

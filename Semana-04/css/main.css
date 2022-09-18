@@ -3,7 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 80px;
-  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%, rgba(229, 242, 244, 0.86) 35%, rgba(203, 228, 216, 0.1118) 58%, rgba(255, 255, 255, 0) 83%);
+  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%,
+                                      rgba(229, 242, 244, 0.86) 35%,
+                                      rgba(203, 228, 216, 0.1118) 58%,
+                                      rgba(255, 255, 255, 0) 83%);
 }
 .welcomeDiv {
   display: flex;
@@ -213,7 +216,10 @@ form {
   position: relative;
   align-content: center;
   padding: 16px;
-  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%, rgba(229, 242, 244, 0.86) 35%, rgba(203, 228, 216, 0.1118) 58%, rgba(255, 255, 255, 0) 83%);
+  background: linear-gradient(180deg, rgba(222, 239, 241, 0.86) 0%,
+                                      rgba(229, 242, 244, 0.86) 35%,
+                                      rgba(203, 228, 216, 0.1118) 58%,
+                                      rgba(255, 255, 255, 0) 83%);
 }
 .greenUnderline {
   font-weight: 700;
@@ -359,100 +365,98 @@ form {
 }
 
 @media (min-width: 768px) {
-
-body{
-  padding-top: 141px;
-}
-.input {
-  width: 40%;
-}
-.inputcontact {
-  width: 81.5%;
-}
-.description {
-  max-width: 520px;
-}
-
-.section5 {
-  padding: 26px;
-}
-.purpleUnderline {
-  display: inline;
-  font-size: 1rem;
-}
-.greenUnderline {
-  display: inline;
-  font-size: 1rem;
-}
-.toRight {
-  align-items: flex-end;
-}
+  body{
+    padding-top: 141px;
+  }
+  .input {
+    width: 40%;
+  }
+  .inputcontact {
+    width: 81.5%;
+  }
+  .description {
+    max-width: 520px;
+  }
+  .section5 {
+    padding: 26px;
+  }
+  .purpleUnderline {
+    display: inline;
+    font-size: 1rem;
+  }
+  .greenUnderline {
+    display: inline;
+    font-size: 1rem;
+  }
+  .toRight {
+    align-items: flex-end;
+  }
 }
 
 @media (min-width: 1200px) {
-.product {
-  width: 40%;
-}
-.support {
-  margin: 50px 0px;
-}
-.keyboardImgSection1 {
-  width: 40%;
-  max-width: 385px;
-  height: auto;
-  border: 0.5px solid #000000;
-}
-.section2 img {
-  width: 35%;
-  height: auto;
-}
-.purpleUnderline {
-  display: inline;
-  font-size: 1.5rem;
-}
-.greenUnderline {
-  display: inline;
-  font-size: 1.5rem;
-}
-.securityText {
-  display: flex;
-  flex-direction: row;
-}
-.securityText .paragraph{
-  width: 68%;
-  margin-right: 22px;
-}
-.companySubsection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.companySubsection img {
-  width: 30%;
-  height: auto;
-  max-width: 350px;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.toRight {
-  align-items: inherit;
-}
-.toRight img {
-  order: 1;
-  margin-right: 1rem;
-}
-  .ourProductsDescription{
-  text-align: left;
-}
-.section3subsection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.whyTrackgenixSubsection {
-  width: 45%;
-}
-.welcomeSubsection {
-  flex-direction: row-reverse;
-}
+  .product {
+    width: 40%;
+  }
+  .support {
+    margin: 50px 0px;
+  }
+  .keyboardImgSection1 {
+    width: 40%;
+    max-width: 385px;
+    height: auto;
+    border: 0.5px solid #000000;
+  }
+  .section2 img {
+    width: 35%;
+    height: auto;
+  }
+  .purpleUnderline {
+    display: inline;
+    font-size: 1.5rem;
+  }
+  .greenUnderline {
+    display: inline;
+    font-size: 1.5rem;
+  }
+  .securityText {
+    display: flex;
+    flex-direction: row;
+  }
+  .securityText .paragraph{
+    width: 68%;
+    margin-right: 22px;
+  }
+  .companySubsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .companySubsection img {
+    width: 30%;
+    height: auto;
+    max-width: 350px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .toRight {
+    align-items: inherit;
+  }
+  .toRight img {
+    order: 1;
+    margin-right: 1rem;
+  }
+    .ourProductsDescription{
+    text-align: left;
+  }
+  .section3subsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .whyTrackgenixSubsection {
+    width: 45%;
+  }
+  .welcomeSubsection {
+    flex-direction: row-reverse;
+  }
 }
