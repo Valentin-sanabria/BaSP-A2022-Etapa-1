@@ -42,7 +42,8 @@ In the third week, I started coding the styling of the web page. We had to creat
  - [x] Correct indentation
  - [x] Update project's README.md file
 
-## Week 04 🕑
+## Week 04  ✔
+
 
 In the fourth week, we kept working on the styling of the web page. We have to create a specific .CSS file for each component of the landing page (for ex. nav, footer, main, etc). Luckily, we are able to use Flexbox this week as well as incentivized to use justify-content and align-items. We also need to make the web responsive, by utilizing not only Flexbox but also media-queries, which are extremely useful for hiding and showing HTML elements.
 
@@ -51,4 +52,14 @@ In the fourth week, we kept working on the styling of the web page. We have to c
  - [x] Add and use media-queries
  - [x] Upload  progress to Github
  - [x] Correct indentation
+ - [x] Update project's README.md file
+
+## Week 05 🕑
+
+In the fifth week, we were given multiple Javascript excercises that we had to solve. Excercises included subjects like arrays, for loops, functions, among other things. Following the good practices spreadsheet we made multiple .js files for each topic and also used multiple console.logs for the showcase of results.  
+
+ - [x] Solve JS excercises
+ - [x] Upload progress to Github
+ - [x] Make corrections in excercises based on meeting's feedback.
+ - [x] Make corrections in CSS.
  - [x] Update project's README.md file
