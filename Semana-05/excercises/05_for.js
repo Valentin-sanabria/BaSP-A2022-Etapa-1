@@ -21,7 +21,7 @@ for (var i=0 ; i<array.length ; i++){
 console.log('\n-Excercise 5.c');
 var sentence = '';
 for (var i=0 ; i<array.length ; i++){
-    sentence = sentence.concat(array[i]);
+    sentence = sentence.concat(array[i] + ' ') ;
 }
 alert(sentence);
 
