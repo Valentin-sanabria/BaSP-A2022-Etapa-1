@@ -25,12 +25,7 @@ console.log(result);
 // si es un número entero.
 console.log('\n-Excercise 6.c');
 function validateInteger(x) {
-    if ( Number.isInteger(x) ){
-        return true;
-    }
-    else {
-        return false;
-    }
+    return Number.isInteger(x)
 }
 console.log(validateInteger(7));
 
@@ -45,11 +40,13 @@ function addAndValidate(x, y) {
     }
     if( validateInteger(x) == false ) {
         alert(x + ' is NOT an integer. We rounded it to: '+ Math.round(x));
+        x = Math.round(x);
     }
     if( validateInteger(y) == false) {
         alert(y + ' is NOT an integer. We rounded it to: '+ Math.round(y));
+        y = Math.round(y)
     }
-    return Math.round(x) + Math.round(y);
+    return x + y;
 }
 result = addAndValidate(2.8, 3.233);
 console.log(result);
@@ -58,15 +55,20 @@ console.log(result);
 // probando que todo siga funcionando igual
 console.log('\n-Excercise 6.e');
 function addRounded(x, y){
-    result = x + y;
-    result = validationInt(result);
-    return result;
+    x = validationInt(x);
+    y = validationInt(y);
+    return  x + y;
 }
 function validationInt(num) {
-    if( validateInteger(num) == false ) {
+    if (typeof num !== 'number') {
+        alert('One of your variables is NOT a number.');
+        return NaN;
+    }
+    if( validateInteger(num) === false ) {
         alert(num + ' is NOT an integer. We rounded it to: '+ Math.round(num));
         return Math.round(num);
     }
+        return num;
 }
-result = addRounded(2, 6.2);
+result = addRounded(2.8, 6.2);
 console.log(result);
