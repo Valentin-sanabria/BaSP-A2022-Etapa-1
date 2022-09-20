@@ -23,7 +23,7 @@
 				<h1>Trackgenix</h1>
 				<img src="imgs/burgerMenuIcon.png" class="burgerIcon invisibleTablet" alt="burger menu icon">
 			</div>
-			<nav class="showTablet margin30">           
+			<nav class="showTablet">           
 				<button class="navButton"> <a class="navButtonText" href="features.html">Features</a> </button>
 				<button class="navButton"> <a class="navButtonText" href="why-trackgenix.html">Why you should use
 				Trackgenix</a> </button>
@@ -34,29 +34,31 @@
 			</nav>
 		</header>
 		<aside class="showTablet">
+			<form>
 				<input type="text" class="searchIcon" placeholder="Search...">
-				<p class="menuSide">Menu</p>
-				<div class="asideButtonsContainer">
-					<button class="asideButton"> <a href="sign-up.html">Home</a> </button>
-					<button class="asideButton"> <a href="sign-up.html">Sign up</a> </button>
-					<button class="asideButton"> <a href="log-in.html">Log in</a> </button>
-					<button class="asideButton"> <a href="contact-info.html">Contact information</a> </button>
-				</div>
-				<div class="logoAndTextAside">
-					<img src="imgs/LOGO-RR3.png" class="rrLogo" alt="Company logo">
-					<p class="asideText">
-						Developed by GigaTech Software Solutions S.A.
-					</p>
-				</div>	
+			</form>
+			<p class="menuSide">Menu</p>
+			<div class="asideButtonsContainer">
+				<button class="asideButton"> <a href="sign-up.html">Home</a> </button>
+				<button class="asideButton"> <a href="sign-up.html">Sign up</a> </button>
+				<button class="asideButton"> <a href="log-in.html">Log in</a> </button>
+				<button class="asideButton"> <a href="contact-info.html">Contact information</a> </button>
+			</div>
+			<div class="logoAndTextAside">
+				<img src="imgs/logoRR.png" class="rrLogo" alt="Company logo">
+				<p class="asideText">
+					Developed by GigaTech Software Solutions S.A.
+				</p>
+			</div>	
 		</aside>
-		<main class="margin30">
-			<section class="section1 flexColumn">
+		<main>
+			<section class="welcomeSection flexDirectionColumn">
 				<div class="welcomeDiv">
 					<p class="welcome">
 						Welcome
 					</p>
 				</div>
-				<div class="welcomeSubsection flexColumn">
+				<div class="welcomeSubsection flexDirectionColumn">
 					<img src="imgs/Rectangle2.png" class="keyboardImgSection1" alt="article photo">
 					<p class="projectDescription">
 						“TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA.
@@ -66,30 +68,30 @@
 				</div>
 			</section>
 			<div class="sectionDivider"></div>
-			<section class="section2  flexColumn">
-				<p class="sectionTitle">
+			<section class="appFeaturesSection  flexDirectionColumn">
+				<h2 class="sectionTitle">
 					Application Features
-				</p>
+				</h2>
 				<div class="subsectionsContainer">
-					<div class="subSection hoursLog flexColumn">
+					<div class="subSection hoursLog flexDirectionColumn">
 						<p class="subtitle">
 							Hours Log
 						</p>
 						<img src="imgs/AppFeatures1.png" alt="Hours Log">
 					</div>
-					<div class="subSection reports flexColumn">
+					<div class="subSection reports flexDirectionColumn">
 						<p class="subtitle">
 							Reports
 						</p>
 						<img src="imgs/ApplicationFeatures2.png" alt="reports">
 					</div>
-					<div class="subSection resourceManagement flexColumn">
+					<div class="subSection resourceManagement flexDirectionColumn">
 						<p class="subtitle">
 							Resource Management
 						</p>
 						<img src="imgs/ApplicationFeatures3.png" alt="Resource Management">
 					</div>
-					<div class="subSection multipleRoles flexColumn">
+					<div class="subSection multipleRoles flexDirectionColumn">
 						<p class="subtitle">
 							Multiple Roles
 						</p>
@@ -98,12 +100,12 @@
 				</div>
 			</section>
 			<div class="sectionDivider sectionDivider2"></div>
-			<section class="section3 flexColumn">
-				<p class="sectionTitle">
+			<section class="whyTrackgenixSection flexDirectionColumn">
+				<h2 class="sectionTitle">
 					Why should you use Trackgenix?
-				</p>
-				<div class="section3subsection">
-					<div class="productivityBooster whyTrackgenixSubsection">
+				</h2>
+				<div class="whyTrackgenixsubsection flexDirectionColumn">
+					<article class="whyTrackgenixArticle">
 						<div class="imgBackground">
 							<img src="imgs/Why1.png" alt="Productivity Booster">
 						</div>
@@ -115,8 +117,8 @@
 								Be more productive using better Focus, Time Management,Organization and Efficiency
 							</p>
 						</div>
-					</div>
-					<div class="workTraceability whyTrackgenixSubsection">
+					</article>
+					<article class="whyTrackgenixArticle workTraceability">
 						<div class="imgBackground">
 							<img src="imgs/Why2.png" alt="Work Traceability">
 						</div>
@@ -128,8 +130,8 @@
 								Keep track of specs, changes, requests, results, and versions
 							</p>
 						</div>
-					</div>
-					<div class="leadershipTeam whyTrackgenixSubsection">
+					</article>
+					<article class="whyTrackgenixArticle">
 						<div class="imgBackground">
 							<img src="imgs/Why3.png" alt="Leadership Team">
 						</div>
@@ -143,8 +145,8 @@
                                 perform to the best of their abilities and continue to grow as professionals.
 							</p>
 						</div>
-					</div>
-					<div class="decisionMaking whyTrackgenixSubsection">
+					</article>
+					<article class="whyTrackgenixArticle">
 						<div class="imgBackground">
 							<img class="img8" src="imgs/Why4.png" alt="Decision making">
 						</div>
@@ -156,15 +158,15 @@
 								Make better decisions for your business
 							</p>
 						</div>
-					</div>
+					</article>
 				</div>
 			</section>
 			<div class="sectionDivider sectionDivider3"></div>
-			<section class="section4 flexColumn">
-				<p class="sectionTitle">
+			<section class="inscriptionFormSection flexDirectionColumn">
+				<h2 class="sectionTitle">
 					Inscription Form
-				</p>
-				<form action="" class="flexColumn">
+				</h2>
+				<form class="flexDirectionColumn">
 					<div class="wrap">
 						<input type="text" placeholder="Name" class="input">
 						<input type="text" placeholder="Email" class="input">
@@ -188,10 +190,10 @@
 				</form>
 			</section>
 			<div class="sectionDivider sectionDivider4"></div>
-			<section class="section5 flexColumn">
-				<p class="sectionTitle">
+			<section class="companyMissionSection flexDirectionColumn">
+				<h2 class="sectionTitle">
 					Company's Mission
-				</p>
+				</h2>
 				<div class="underlines">
 					<p class="greenUnderline">
 						Where we started;
@@ -200,7 +202,7 @@
 						Where we are headed
 					</p>
 				</div>
-				<img src="imgs/LOGO-RR3.png" alt="logo" class="rrLogo">
+				<img src="imgs/logoRR.png" alt="logo" class="rrLogo">
 				<p class="littleText">
 					Make time your ally; make puntuality the difference.
 				</p>
@@ -226,7 +228,7 @@
 				<p class="aboutUs">
 					About us
 				</p>
-				<div class="securityText flexColumn">
+				<div class="securityText flexDirectionColumn">
 					<p class="paragraph">
 						RadiumRocket developed TrackGenix as a software solution for optimal time-tracking and project
 						management as a request for one of its most trusted clients, GigaTech Software Solutions,
@@ -240,12 +242,12 @@
 				</div>
 			</section>
 			<div class="sectionDivider sectionDivider5"></div>
-			<section class="section6 flexColumn">
-				<p class="sectionTitle">
+			<section class="productsSection flexDirectionColumn">
+				<h2 class="sectionTitle">
 					Our Products
-				</p>
+				</h2>
 				<div class="wrapPC">
-					<div class="product product1 flexColumn">
+					<article class="product flexDirectionColumn">
 						<img src="imgs/ourProducts.png" alt="Employee time control">
 						<p class="ourProductsSubtitle blackText">
 							Employee time control from any place and device
@@ -261,8 +263,8 @@
 								<li>Biometric recognition devices</li>
 							</ul>
 						</div>
-					</div>
-					<div class="product product2 flexColumn">
+					</article>
+					<article class="product flexDirectionColumn">
 						<img src="imgs/ourProducts2.png" alt="registration policies">
 						<p class="ourProductsSubtitle blackText">
 							Customized working day registration policies
@@ -276,8 +278,8 @@
 							<li>Weekly massive transfer</li>
 							<li>Flexible entry and exit</li>
 						</ul>
-					</div>
-					<div class="product product3 flexColumn">
+					</article>
+					<article class="product flexDirectionColumn">
 						<img src="imgs/ourProducts3.png" alt="intuitive time control app">
 						<p class="ourProductsSubtitle blackText">
 							The most intuitive time control app
@@ -290,8 +292,8 @@
 							<li>Geolocated transfer detection system</li>
 							<li>Instant notifications and alerts</li>
 						</ul>
-					</div>
-					<div class="product product4 flexColumn">
+					</article>
+					<article class="product flexDirectionColumn">
 						<img src="imgs/ourProducts4.png" alt="Project management">
 						<p class="ourProductsSubtitle blackText">
 							Project management done well
@@ -303,15 +305,15 @@
 							<li>Brose between different projects.</li>
 							<li>Equipped with graphs and tablets</li>
 						</ul>
-					</div>
+					</article>
 				</div>
 			</section>
 			<div class="sectionDivider sectionDivider6"></div>
-			<section class="section7 flexColumn">
-				<p class="sectionTitle blackText">
+			<section class="companySection flexDirectionColumn">
+				<h2 class="sectionTitle blackText">
 					Company
-				</p>
-				<div class="companySubsection">
+				</h2>
+				<article class="companySubsection">
 					<img src="imgs/image22.png" class="imgLeft1" alt="GigaTech building">
 					<div class="companySubsectionTextImg">
 						<p class="subtitle blackText">
@@ -322,10 +324,10 @@
                             in more	than 1200 cities around the world.
 						</p>
 					</div>
-				</div>
-				<div class="companySubsection toRight">
+				</article>
+				<article class="companySubsection toRight">
 					<img src="imgs/image24.png" alt="Inclusive workplace">
-					<div class="toRight companySubsectionTextImg flexColumn">
+					<div class="toRight companySubsectionTextImg flexDirectionColumn">
 						<p class="subtitle blackText toRight">
 							An inclusive workplace for everyone
 						</p>
@@ -335,8 +337,8 @@
                             and humane way with	our	human resources software.
 						</p>
 					</div>
-				</div>
-				<div class="companySubsection">
+				</article>
+				<article class="companySubsection">
 					<img class="imgLeft2" src="imgs/image23.png" alt="Our workplace">
 					<div class="companySubsectionTextImg">
 						<p class="subtitle blackText">
@@ -349,32 +351,32 @@
                             and easy-to-use time control tool.
 						</p>
 					</div>
-				</div>
+				</article>
 			</section>
 			<div class="sectionDivider sectionDivider7"></div>
-			<section class="section8 flexColumn">
-				<p class="sectionTitle blackText">
+			<section class="supportSection flexDirectionColumn">
+				<h2 class="sectionTitle blackText">
 					Support
-				</p>
+				</h2>
 				<div class="wrapPC">
-					<div class="support flexColumn">
+					<article class="support flexDirectionColumn">
 						<img class="imgLeft3" src="imgs/image25.png" alt="Support from 8am to 4pm everyday">
 						<p class="subtitleSupport blackText">
 							Phone call or Video conference support from 8am to 4pm everyday
 						</p>
-					</div>
-					<div class="support flexColumn">
+					</article>
+					<article class="support flexDirectionColumn">
 						<img class="imgRight2" src="imgs/image26.png" alt="24hs support chat">
 						<p class="subtitleSupport blackText">
 							24h support by online chat bot
 						</p>
-					</div>
+					</article>
 				</div>
-				<p class="sectionTitle blackText">
+				<h2 class="sectionTitle blackText">
 					Tutorials
-				</p>
+				</h2>
 				<div class="tutorialsContainer">
-					<ol class="tutorialsList flexColumn">
+					<ol class="tutorialsList flexDirectionColumn">
 						<li class="blackText">
 							<div class="blackText"> 
                                 “TrackGenix: Quick Start Guide”
@@ -420,7 +422,7 @@
 				</div>
 			</section>
 		</main>
-		<footer class="margin30">
+		<footer>
 			<div class="footerIcons">
 				<a class="fbIcon" href="https://www.facebook.com">
 				<img src="imgs/Vector.png" alt="Facebook icon">

@@ -5,15 +5,15 @@
   color: #373867;
 }
 body{
-  padding-top: 91px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 91px;
 }
 .showTablet {
   display: none;
 }
-.flexColumn {
+.flexDirectionColumn {
   display: flex;
   flex-direction: column;
 }
@@ -31,9 +31,6 @@ body{
   .invisibleTablet {
     visibility: hidden;
   }
-  .margin30 {
-    margin-left: min(25%, 320px);
-  }
 }
 @media (min-width: 1200px) {
   html{
@@ -41,8 +38,8 @@ body{
   }
 .wrapPC {
   display: flex;
-  width: 80%;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 80%;
   }
 }

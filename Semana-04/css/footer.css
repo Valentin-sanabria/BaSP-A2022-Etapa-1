@@ -21,3 +21,8 @@
   font-weight: 700;
   font-size: 0.8rem;
 }
+@media (min-width: 768px) {
+  footer {
+    margin-left: min(25%, 320px);
+  }
+}
