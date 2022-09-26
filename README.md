@@ -54,7 +54,7 @@ In the fourth week, we kept working on the styling of the web page. We have to c
  - [x] Correct indentation
  - [x] Update project's README.md file
 
-## Week 05 🕑
+## Week 05  ✔
 
 In the fifth week, we were given multiple Javascript excercises that we had to solve. Excercises included subjects like arrays, for loops, functions, among other things. Following the good practices spreadsheet we made multiple .js files for each topic and also used multiple console.logs for the showcase of results.  
 
@@ -63,3 +63,16 @@ In the fifth week, we were given multiple Javascript excercises that we had to s
  - [x] Make corrections in excercises based on meeting's feedback.
  - [x] Make corrections in CSS.
  - [x] Update project's README.md file
+
+## Week 06 🕑
+
+In the sixth week, we had to create the login and sign-up pages of the Trackgenix official website. We made from scratch the .HTML, .CSS and .JS of each Figma design. The weekly problematic included challenges like validation of inputs, assigning and removing classes with JS, avoid use of RegEx, creation and removal of HTML elements using document.create and element.remove.
+
+ - [x] Create .HTML files for both pages.
+ - [x] Create .CSS files for both pages.
+ - [x] Create .JS files for both pages.
+ - [x] Upload progress to Github.
+ - [x] Make corrections based on meeting's feedback.
+ - [x] Indent and tide up code before submitting.
+ - [x] Check everything works as intended on Github Pages.
+ - [x] Update project's README.md file.
