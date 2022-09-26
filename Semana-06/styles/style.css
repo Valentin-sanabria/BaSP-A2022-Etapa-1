@@ -1,0 +1,47 @@
+*, body {
+  font-family: 'Roboto';
+  box-sizing: border-box;
+  margin: 0;
+  color: #373867;
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 91px;
+}
+.showTablet {
+  display: none;
+}
+.flexDirectionColumn {
+  display: flex;
+  flex-direction: column;
+}
+.smallText {
+  font-size: 0.75rem;
+}
+@media (min-width: 768px) {
+  html{
+    font-size: 18px;
+  }
+  .showTablet {
+    display: flex;
+  }
+  .hideTablet {
+    display: none;
+  }
+  .invisibleTablet {
+    visibility: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  html{
+    font-size: 20px;
+  }
+.wrapPC {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  }
+}

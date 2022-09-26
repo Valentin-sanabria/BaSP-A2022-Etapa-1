@@ -1,0 +1,60 @@
+aside {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 91px;
+  height: 100vh;
+  width: 25%;
+  max-width: 320px;
+  padding: 70px 30px;
+  background-color: rgba(55, 56, 103, 0.1);
+}
+aside input {
+  height: 29px;
+  width: 100%;
+  border-radius: 8px;
+}
+.searchIcon {
+  border-radius: 3.5px;
+  border: 2px solid #444;
+  background: url(/imgs/search-icon.jpeg) no-repeat right;
+  background-color: #f5f5f5;
+}
+.asideButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.asideButton {
+  width: 142px;
+  padding: 22px 0px;
+  background: rgba(55, 56, 103, 0);
+  border: none;
+  border-bottom: 1px solid black;
+}
+.asideButton a {
+  font-family: "Roboto";
+  font-size: 1rem;
+  text-decoration: none;
+  color: #479679;
+}
+.asideText {
+  margin-top: 22px;
+  font-size: 0.6rem;
+}
+.logoAndTextAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 33px;
+  text-align: center;
+}
+.menuSide {
+  margin-top: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #373867;
+  text-align: center;
+}
