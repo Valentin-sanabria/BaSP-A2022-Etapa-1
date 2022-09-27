@@ -108,7 +108,7 @@ window.onload = function() {
             
             case "inputPass":
                 if (checkLength(inputPass, 8, 0) === false || alphaNumeric(inputPass)  === false){
-                    passAlertMsg = "ERROR Passwords are not the same.";
+                    passAlertMsg = "ERROR Passwords is invalid.";
                     return false
                 }
                 removeErrorShowGreen(inputPass);
@@ -145,6 +145,9 @@ window.onload = function() {
     }    
 
     signInBtn.onclick = function (){
+        validateInput("inputPass");
+        validateInput("inputMail");
+        
         alert(  "E-mail: " + emailAlertMsg +
                 "\nPassword: " + passAlertMsg
         )

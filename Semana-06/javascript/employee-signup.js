@@ -102,7 +102,6 @@ window.onload = function(){
     }
 
     function removeErrorShowGreen(inputToValidate) {
-        console.log(inputToValidate.parentNode);
         if (inputToValidate.parentNode.children.length > 1  ){
             inputToValidate.parentNode.children[1].remove();
         }
@@ -128,7 +127,6 @@ window.onload = function(){
                 containsNumber = true;
             }
             if(containsLetter === true && containsNumber === true && i === (inputValue.length - 1) ){
-                console.log("Valid password.");
                 return true;
             }
         }
@@ -145,6 +143,18 @@ window.onload = function(){
             return false;
         }
         return false;
+    }
+    
+    function validateBirth() {
+        var [year, month, day] = inputBirth.value.split('-');
+
+        if (parseInt(year) <= 1920 || parseInt(year) > 2012  ){
+            errorMessage = "Invalid year.";
+            redBorder(inputBirth);
+            appendErrorMesage(inputBirth, errorMessage);
+            return false;
+        }
+        return true;
     }
 
     function validateAddress(inputToValidate) {
@@ -231,12 +241,13 @@ window.onload = function(){
                 break;
             
             case "inputBirth":
-                if (checkLength(inputBirth,10,10) === false) {
+                if (checkLength(inputBirth,10,10) === false || validateBirth() === false) {
                     dateAlertMsg = "ERROR Date is invalid.";
                     return false;
                 }
                 removeErrorShowGreen(inputBirth);
-                dateAlertMsg = inputBirth.value;
+                var [year, month, day] = inputBirth.value.split('-');
+                dateAlertMsg = [day, month, year].join('/');
                 break;
             
             case "inputLocality":
@@ -329,7 +340,6 @@ window.onload = function(){
         validateInput("inputPhone");
     }
     inputBirth.onblur = function () {
-        console.log(inputBirth.value.length); 
         validateInput("inputBirth")
     }
     inputAddress.onblur = function () {
