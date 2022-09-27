@@ -176,25 +176,28 @@
 							<input id="inputMail" type="text" placeholder="Email" class="input">
 						</fieldset>
 					</div>
-					<input id="inputContactArea" type="text" placeholder="Contact Area" class="input inputcontact">
+					<fieldset class="inputcontact">
+						<input id="inputContactArea" type="text" placeholder="Contact Area" class="input">
+					</fieldset>
 					<div class="wrap">
 						<fieldset class="checkboxAndText">
-							<input type="checkbox" name="email" class="check1">
+							<input type="checkbox" name="email" class="checkSendEmail">
 							<p class="checkText blackText">
 								Email me a copy
 							</p>
 						</fieldset>
 						<fieldset class="checkboxAndText">
-							<input type="checkbox" name="ToS" id="check2">
-							<p class="checkText blackText">
+							<input type="checkbox" name="ToS" id="checkToS">
+							<p class="checkText blackText" id="checkText">
 								I am a human and I accept terms of service
 							</p>
 						</fieldset>
 					</div>
 					<fieldset class="inputTextArea">
-						<textarea cols="30" rows="10"></textarea>
+						<textarea cols="30" rows="10" id="inputTextArea"></textarea>
 					</fieldset>
 				</form>
+				<button id="submitBtn" class="submitBtn">Submit message</button>
 			</section>
 			<div class="sectionDivider sectionDivider4"></div>
 			<section class="companyMissionSection flexDirectionColumn">

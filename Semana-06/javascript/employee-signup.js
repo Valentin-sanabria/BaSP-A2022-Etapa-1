@@ -147,7 +147,8 @@ window.onload = function(){
         return false;
     }
 
-    function validateAddress(address) {
+    function validateAddress(inputToValidate) {
+        var address = inputToValidate.value;
         if (address.indexOf(" ") == -1){
             errorMessage = "Separate letters from numbers.";
             redBorder(inputToValidate);
@@ -257,7 +258,7 @@ window.onload = function(){
                 break;
             
             case "inputAddress":
-                if (checkLength(inputAddress,5,0) === false || validateAddress(inputAddress.value)  === false) {
+                if (checkLength(inputAddress,5,0) === false || validateAddress(inputAddress)  === false) {
                     addressAlertMsg = "ERROR Surname is invalid.";
                     return false;
                 }

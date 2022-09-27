@@ -201,16 +201,30 @@ form {
   margin-left: 8px;
   font-size: 0.8rem;
 }
+.inputcontact{
+  width: 80%;
+  margin: 12px;
+}
 .inputTextArea {
   width: 80%;
   margin-top: 22px;
 
 }
-.inputTextArea textarea {
+textarea {
   width: 100%;
   height: 300px;
   border: 1px solid #E0E0E0;
   border-radius: 8px;
+}
+.submitBtn {
+  align-self: center;
+  width: 250px;
+  height: 60px;
+  margin-top: 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(170, 206, 155, 0.53);
+  color: rgb(57, 78, 45);
 }
 .companyMissionSection {
   position: relative;
@@ -367,7 +381,6 @@ form {
   background: #fcf4f4;
   border: 1px solid #df3112;
   color: #df3112 ;
-  border-radius: 4px;
 }
 .wrongInput:focus {
   outline: 1px solid #df3112;
@@ -379,7 +392,6 @@ form {
   background: #fcf4f4;
   border: 1px solid #2bb626;
   color: #63bd63 ;
-  border-radius: 4px;
 }
 .correctInput:focus {
   outline: 1px solid #2bb626;
@@ -392,6 +404,10 @@ form {
   font-size: 0.52rem;
   color: #df3112;
 }
+.setInputWidth45 {
+  width: 80%;
+  margin: 12px;
+}
 @media (min-width: 768px) {
   body{
     padding-top: 141px;
@@ -402,9 +418,6 @@ form {
   .setInputWidth45 {
     width: 40%;
     margin: 12px;
-  }
-  .inputcontact {
-    width: 81.5%;
   }
   .description {
     max-width: 520px;
