@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="/styles/aside.css">
 		<link rel="stylesheet" href="/styles/main.css">
 		<link rel="stylesheet" href="/styles/footer.css">
+		<script src="/javascript/contact.js"></script>
 	</head>
 	<body>
 		<header>
@@ -168,25 +169,31 @@
 				</h2>
 				<form class="flexDirectionColumn">
 					<div class="wrap">
-						<input type="text" placeholder="Name" class="input">
-						<input type="text" placeholder="Email" class="input">
+						<fieldset class="setInputWidth45">
+							<input id="inputName" type="text" placeholder="Name" class="input">
+						</fieldset>
+						<fieldset  class="setInputWidth45">
+							<input id="inputMail" type="text" placeholder="Email" class="input">
+						</fieldset>
 					</div>
-					<input type="text" placeholder="Contact Area" class="input inputcontact">
+					<input id="inputContactArea" type="text" placeholder="Contact Area" class="input inputcontact">
 					<div class="wrap">
-						<div class="checkboxAndText">
+						<fieldset class="checkboxAndText">
 							<input type="checkbox" name="email" class="check1">
 							<p class="checkText blackText">
 								Email me a copy
 							</p>
-						</div>
-						<div class="checkboxAndText">
+						</fieldset>
+						<fieldset class="checkboxAndText">
 							<input type="checkbox" name="ToS" id="check2">
 							<p class="checkText blackText">
 								I am a human and I accept terms of service
 							</p>
-						</div>
+						</fieldset>
 					</div>
-					<textarea id="inputTextArea" cols="30" rows="10"></textarea>
+					<fieldset class="inputTextArea">
+						<textarea cols="30" rows="10"></textarea>
+					</fieldset>
 				</form>
 			</section>
 			<div class="sectionDivider sectionDivider4"></div>

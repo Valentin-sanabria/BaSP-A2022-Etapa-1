@@ -44,35 +44,6 @@ main form input{
 .containerForInputErrorMsg {
     margin: 22px 18px 0px 18px;
 }
-.wrongInput{
-    background: #fcf4f4;
-    border: 1px solid #df3112;
-    color: #df3112 ;
-    border-radius: 4px;
-}
-.wrongInput:focus {
-    outline: 1px solid #df3112;
-}
-.wrongInput::placeholder {
-    color: #df3112;
-}
-.correctInput{
-    background: #fcf4f4;
-    border: 1px solid #2bb626;
-    color: #63bd63 ;
-    border-radius: 4px;
-}
-.correctInput:focus {
-    outline: 1px solid #2bb626;
-}
-.correctInput::placeholder {
-    color: #2bb626;
-}
-.errorMessage{
-    margin-top: 6px;
-    font-size: 0.52rem;
-    color: #df3112;
-}
 .styleForLinks {
     font-size: 0.8rem;    
     color: #00A3FF;
