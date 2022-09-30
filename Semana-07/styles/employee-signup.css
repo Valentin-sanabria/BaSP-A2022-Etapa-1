@@ -1,0 +1,79 @@
+.containerSignIn{
+    align-items: center;
+    justify-content: space-between;
+    max-width: 830px;
+    padding: 22px;
+    background-color: #ECE9F1;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+}
+.containerTitle {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.containerSignIn form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+.buttonAndCheckboxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    margin-top: 22px;
+}
+main { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+main form input{
+    width: 250px;
+    height: 40px;
+    background: #FAFBFD;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+.containerForInputErrorMsg {
+    margin: 22px 18px 0px 18px;
+}
+.styleForLinks {
+    font-size: 0.8rem;    
+    color: #00A3FF;
+}
+.termsAndSignin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 255px;
+}
+.termsAndSignin .smallText{
+    margin-top: 8px;
+}
+.checkboxAndTextDiv {
+    display: flex;
+    align-items: center;
+}
+.checkboxAndTextDiv input {
+    margin-right: 8px;
+}
+.buttonTextDiv {
+    align-items: center;
+    align-self: flex-end;
+}
+.signUpButton {
+    width: 186px;
+    height: 47px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background: #AACE9B;
+    border: none;
+    border-radius: 5px;
+}

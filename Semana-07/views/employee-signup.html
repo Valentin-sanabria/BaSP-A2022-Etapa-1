@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TrackGenix official web</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap"
+			rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../styles/reset.css">
+		<link rel="stylesheet" href="../styles/style.css">
+		<link rel="stylesheet" href="../styles/header.css">
+		<link rel="stylesheet" href="../styles/nav.css">
+		<link rel="stylesheet" href="../styles/aside.css">
+		<link rel="stylesheet" href="../styles/main.css">
+		<link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/employee-signup.css">
+		<script src="../javascript/employee-signup.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="headerContainer">
+				<img src="../assets/imgs/logoRR.png" class="rrLogo" alt="logo">
+				<h1>Trackgenix</h1>
+				<img src="../assets/imgs/burgerMenuIcon.png" class="burgerIcon invisibleTablet" alt="burger menu icon">
+			</div>
+			<nav class="showTablet">           
+				<button class="navButton"> <a class="navButtonText" href="#">Features</a> </button>
+				<button class="navButton"> <a class="navButtonText" href="#">Why you should use
+				Trackgenix</a> </button>
+				<button class="navButton"> <a class="navButtonText" href="#">History</a> </button>
+				<button class="navButton"> <a class="navButtonText" href="#">Products</a> </button>
+				<button class="navButton"> <a class="navButtonText" href="#">About us</a> </button>
+				<button class="navButton"> <a class="navButtonText" href="#">Support</a> </button>
+			</nav>
+		</header>
+		<aside class="showTablet">
+			<form>
+				<input type="text" class="searchIcon" placeholder="Search...">
+			</form>
+			<p class="menuSide">Menu</p>
+			<div class="asideButtonsContainer">
+				<button class="asideButton"> <a href="index.html">Home</a> </button>
+				<button class="asideButton"> <a href="employee-signup.html">Sign up</a> </button>
+				<button class="asideButton"> <a href="login.html">Log in</a> </button>
+				<button class="asideButton"> <a href="#">Contact information</a> </button>
+			</div>
+			<div class="logoAndTextAside">
+				<img src="../assets/imgs/logoRR.png" class="rrLogo" alt="Company logo">
+				<p class="asideText">
+					Developed by GigaTech Software Solutions S.A.
+				</p>
+			</div>	
+		</aside>
+		<main>
+            <div class="containerSignIn flexDirectionColumn">
+                <p class="containerTitle">Sign up</p>
+                <form>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputName" type="text" placeholder="Full name...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputSurname" type="text" placeholder="Surname...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputId" type="text" placeholder="ID number...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputBirth" type="date" placeholder="Birth date...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputPhone" type="text" placeholder="Phone number...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputAddress" type="text" placeholder="Address...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputLocality" type="text" placeholder="Locality...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputZipcode" type="text" placeholder="Zip code...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputMail" type="text" placeholder="E-mail...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputConfirmMail" type="text" placeholder="Confirm E-mail...">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputPass" type="password" placeholder="Password..." id="">
+					</fieldset>
+					<fieldset class="containerForInputErrorMsg">
+						<input id="inputConfirmPass" type="password" placeholder="Confirm password..." id="">
+					</fieldset>
+                </form>
+                <div class="buttonAndCheckboxContainer">
+                    <div class="termsAndSignin flexDirectionColumn">
+                        <div class="checkboxAndTextDiv">
+                            <input type="checkbox" id="">
+                            <p>I accept the Terms & Conditions.</p>
+                        </div>
+                        <p class="smallText">Already have an account? <a class="styleForLinks" href="login.html">Sign in</a> </p>
+                    </div>
+                    <button id="signUpBtn" class="signUpButton">Sign up</button>
+                </div>
+            </div>
+		</main>
+		<footer>
+			<div class="footerIcons">
+				<a class="fbIcon" href="https://www.facebook.com">
+				<img src="../assets/imgs/Vector.png" alt="Facebook icon">
+				</a>
+				<a class="twitter" href="https://twitter.com/">
+				<img src="../assets/imgs/twiiter.png" alt="Twitter icon">
+				</a>
+				<a class="instagram" href="https://www.instagram.com">
+				<img src="../assets/imgs/Instagram - Negative.png" alt="Instagram icon">
+				</a>
+				<a class="linkedin" href="https://www.linkedin.com/">
+				<img src="../assets/imgs/LinkedIn - Negative.png" alt="Linkedin icon">
+				</a>
+			</div>
+			<p class="footerText">
+				Rosario, Argentina
+				<span>Copyright © 2022 Radium Rocket. All rights reserved.</span>
+			<p>
+		</footer>
+	</body>
+</html>

@@ -64,7 +64,7 @@ In the fifth week, we were given multiple Javascript excercises that we had to s
  - [x] Make corrections in CSS.
  - [x] Update project's README.md file
 
-## Week 06 🕑
+## Week 06 ✔
 
 In the sixth week, we had to create the login and sign-up pages of the Trackgenix official website. We made from scratch the .HTML, .CSS and .JS of each Figma design. The weekly problematic included challenges like validation of inputs, assigning and removing classes with JS, avoid use of RegEx, creation and removal of HTML elements using document.create and element.remove.
 
@@ -76,3 +76,14 @@ In the sixth week, we had to create the login and sign-up pages of the Trackgeni
  - [x] Indent and tide up code before submitting.
  - [x] Check everything works as intended on Github Pages.
  - [x] Update project's README.md file.
+ 
+ ## Week 07 🕑
+In the seventh week, we have to keep working on the work we did last week, now we have to connect it with an API server and use it to validate. We have to code it in a way that every time we press the login and signup button all the data that we have inputted get sent to a web server through a HTTP request and grab whatever it returns. In case its an error, display it on screen, and in case all data is correct. Save it in localStorage for future purposes.
+
+ - [x] Update project's README.md file.
+ - [x] Connect page to API server.
+ - [x] Implement correctly the use of localStorage.
+ - [x] Upload progress to Github.
+ - [x] Make corrections based on tutor's feedback.
+ - [x] Indent and tide up code before submitting.
+ - [x] Check everything works as intended on Github Pages.

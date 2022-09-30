@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  position: fixed;
+  width: max(75%, (100% - 320px) );
+  height: 55px;
+  top: 91px;
+  z-index: 100;
+}
+.navIcon {
+  width: 50px;
+  height: 39px;
+}
+.navButton {
+  width: 100%;
+  font-size: 0.77rem;
+  background-color: #373867;
+  border: none;
+  border-right: 1px solid black;
+}
+.navButtonText {
+  font-family: "Roboto Flex", sans-serif;
+  text-decoration: none;
+  color: #46a07b;
+}
+@media (min-width: 768px) {
+  nav {
+    margin-left: min(25%, 320px);
+  }
+}
