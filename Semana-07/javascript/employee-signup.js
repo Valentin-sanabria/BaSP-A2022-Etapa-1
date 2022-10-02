@@ -38,6 +38,36 @@ window.onload = function(){
     var emailURL = "";
     var passURL = "";
 
+    function saveLocalStorage(data){
+        console.log(data);
+        localStorage.setItem("name", data.data.name);
+        localStorage.setItem("surname", data.data.lastName);
+        localStorage.setItem("id", data.data.dni);
+        localStorage.setItem("email", data.data.email);
+        localStorage.setItem("dateBirth", data.data.dob);
+        localStorage.setItem("password", data.data.password);
+        localStorage.setItem("phone", data.data.phone);
+        localStorage.setItem("address", data.data.address);
+        localStorage.setItem("locality", data.data.city);
+        localStorage.setItem("zip", data.data.zip);
+    }
+
+    function loadLocalStorage(){
+        var [month2, day2, year2] = localStorage.getItem("dateBirth").split('/'); 
+        dateAlertMsg = [year2, month2, day2].join('-');
+        inputBirth.value = dateAlertMsg
+        inputName.value = localStorage.getItem("name");
+        inputSurname.value = localStorage.getItem("surname");
+        inputId.value = localStorage.getItem("id");
+        inputPhone.value = localStorage.getItem("phone");
+        inputAddress.value = localStorage.getItem("address");
+        inputLocality.value = localStorage.getItem("locality");
+        inputZipcode.value = localStorage.getItem("zip");
+        inputMail.value = localStorage.getItem("email");
+        inputPass.value = localStorage.getItem("password");
+        inputConfirmMail.value = localStorage.getItem("email");
+        inputConfirmPass.value = localStorage.getItem("password");
+    }
 
     function fetchData(){
         url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+nameURL+"&lastName="+surnameURL+"&email="+emailURL+"&dni="+idURL+"&dob="+birthURL+"&password="+passURL+"&phone="+phoneURL+"&address="+addressURL+"&city="+localityURL+"&zip="+ zipURL;
@@ -50,7 +80,7 @@ window.onload = function(){
             console.log(data);
             if(data.success === true){
                 alert("Request completed succesfully\n"+ data.msg);
-
+                saveLocalStorage(data);
             } else if (data.success === false){
 
                 alert("An error ocurred.\n"+ data.errors[0].msg);
@@ -375,7 +405,7 @@ window.onload = function(){
         }
     }
 
-
+    loadLocalStorage();
 
     inputName.onblur = function () {
         validateInput("inputName");
