@@ -2,6 +2,11 @@ window.onload = function() {
     var inputMail = document.getElementById("inputMail");
     var inputPass = document.getElementById("inputPass");
     var signInBtn = document.getElementById("signInButton");
+    var wholeModal = document.getElementById("modal");
+    var modalTitle = document.getElementById("modalTitle");
+    var modalBodyText = document.getElementById("modalBodyText");
+    var btnCloseModal = document.getElementById("closeModal");
+    var understandButton = document.getElementById("understandBtn");
     var emailURL = "";
     var passURL = "";
     var url = "";
@@ -16,9 +21,14 @@ window.onload = function() {
         .then(function (data){
             console.log(data);
             if(data.success === true){
-                alert("Request completed succesfully\n"+ data.msg);
+                modalTitle.innerText ="Request completed succesfully";
+                modalBodyText.innerText = data.msg;
+                showModal();
+
             } else if (data.success === false){
-                alert("An error ocurred.\n"+ data.msg);
+                modalTitle.innerText = "An error ocurred";
+                modalBodyText.innerText = data.errors[0].msg;
+                showModal();
             }
         })
         .catch(function (error){
@@ -73,6 +83,14 @@ window.onload = function() {
         inputToValidate.classList.remove("wrongInput");
         inputToValidate.classList.remove("correctInput");
     }
+
+    function removeErrorShowGreen(inputToValidate) {
+        if (inputToValidate.parentNode.children.length > 1  ){
+            inputToValidate.parentNode.children[1].remove();
+        }
+        inputToValidate.classList.remove("wrongInput");
+        inputToValidate.classList.add("correctInput");
+    } 
 
     function alphaNumeric(inputToValidate) {
         var inputValue = inputToValidate.value;
@@ -144,15 +162,15 @@ window.onload = function() {
         }
     }
     
-    
-    function removeErrorShowGreen(inputToValidate) {
-        if (inputToValidate.parentNode.children.length > 1  ){
-            inputToValidate.parentNode.children[1].remove();
-        }
-        inputToValidate.classList.remove("wrongInput");
-        inputToValidate.classList.add("correctInput");
-    } 
+    function closeModal(){
+        wholeModal.classList.remove("show");
+        wholeModal.classList.add("hidden");
+    }
 
+    function showModal(){
+        wholeModal.classList.remove("hidden");
+        wholeModal.classList.add("show");
+    }
 
     inputMail.onblur = function() {
         validateInput("inputMail");
@@ -166,17 +184,15 @@ window.onload = function() {
     inputPass.onfocus = function () {
         removeClass(inputPass);
     }    
+    btnCloseModal.onclick = function() {
+        closeModal();
+    }
+    understandButton.onclick = function() {
+        closeModal();
+    }
 
     signInBtn.onclick = function (){
-        validateInput("inputPass");
-        validateInput("inputMail");
-        //if there's an invalid input finish the function before fetching data.
-        if (emailAlertMsg.includes("ERROR") === true || passAlertMsg.includes("ERROR") === true){
-            alert(  "E-mail: " + emailAlertMsg +
-                    "\nPassword: " + passAlertMsg
-            )
-            return 0;
-        }
         fetchData();
     }
 }
+

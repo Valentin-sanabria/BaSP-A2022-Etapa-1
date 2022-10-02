@@ -408,6 +408,61 @@ textarea {
   width: 80%;
   margin: 12px;
 }
+.backgroundModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3f3e3e71;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 450px;
+  padding: 22px;
+  border-radius: 8px;
+  background-color:  #ECE9F1;
+}
+.modalTitleAndButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.btnCloseModal {
+  float: right;
+  font-size: 1.25rem;
+  text-align: right;
+  border: none;
+  background-color: #ECE9F1;
+}
+.modalBodyText {
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+.understandButton {
+  align-self: flex-end;
+  width: 150px;
+  height: 40px;
+  margin-top: 22px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+  background-color: rgba(170, 206, 155, 0.53);
+}
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
 @media (min-width: 768px) {
   body{
     padding-top: 141px;
