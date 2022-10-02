@@ -13,6 +13,7 @@ window.onload = function(){
     var inputPass = document.getElementById("inputPass");
     var inputConfirmPass = document.getElementById("inputConfirmPass");
     var signUpButton = document.getElementById("signUpBtn");
+    //Input's alert msg
     var errorMessage = "";
     var nameAlertMsg = "";
     var surnameAlertMsg = "";
@@ -24,6 +25,41 @@ window.onload = function(){
     var zipAlertMsg = "";
     var emailAlertMsg = "";
     var passAlertMsg = "";
+    //API variables for link creation
+    var url = "";
+    var nameURL = "";
+    var surnameURL = "";
+    var idURL = ""; 
+    var birthURL = "";
+    var phoneURL = "";
+    var addressURL = "";
+    var localityURL = "";
+    var zipURL = "";
+    var emailURL = "";
+    var passURL = "";
+
+
+    function fetchData(){
+        url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+nameURL+"&lastName="+surnameURL+"&email="+emailURL+"&dni="+idURL+"&dob="+birthURL+"&password="+passURL+"&phone="+phoneURL+"&address="+addressURL+"&city="+localityURL+"&zip="+ zipURL;
+        fetch(url)
+        .then(function (res) {
+            var data = res.json()
+            return data;
+            })
+        .then(function (data){
+            console.log(data);
+            if(data.success === true){
+                alert("Request completed succesfully\n"+ data.msg);
+
+            } else if (data.success === false){
+
+                alert("An error ocurred.\n"+ data.errors[0].msg);
+            }
+        })
+        .catch(function (error){
+            console.log(error);
+        })        
+    }
 
     function checkLength (inputToValidate, minLength, maxLength){
         if (inputToValidate.value === "" ){
@@ -211,6 +247,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputName);
                 nameAlertMsg = inputName.value;
+                nameURL = inputName.value;
                 break;
             
             case "inputSurname": 
@@ -220,6 +257,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputSurname);
                 surnameAlertMsg = inputSurname.value;
+                surnameURL = inputSurname.value;
                 break;
             
             case "inputId":
@@ -229,6 +267,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputId);
                 idAlertMsg = inputId.value;
+                idURL = inputId.value;
                 break;
             
             case "inputPhone":
@@ -238,6 +277,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputPhone);
                 phoneAlertMsg = inputPhone.value;
+                phoneURL = inputPhone.value;
                 break;
             
             case "inputBirth":
@@ -248,6 +288,7 @@ window.onload = function(){
                 removeErrorShowGreen(inputBirth);
                 var [year, month, day] = inputBirth.value.split('-');
                 dateAlertMsg = [day, month, year].join('/');
+                birthURL = [month, day, year].join('/');
                 break;
             
             case "inputLocality":
@@ -257,6 +298,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputLocality);
                 localityAlertMsg = inputLocality.value;
+                localityURL = inputLocality.value;
                 break;
             
             case "inputZipcode":
@@ -266,6 +308,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputZipcode);
                 zipAlertMsg = inputZipcode.value;
+                zipURL = inputZipcode.value;
                 break;
             
             case "inputAddress":
@@ -275,6 +318,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputAddress);
                 addressAlertMsg = inputAddress.value;
+                addressURL = inputAddress.value;
                 break;
 
             case "inputMail":
@@ -291,6 +335,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputMail);
                 emailAlertMsg = inputMail.value;
+                emailURL = inputMail.value;
                 return true;
             
             case "inputConfirmMail":
@@ -301,6 +346,7 @@ window.onload = function(){
                     return false
                 }
                 removeErrorShowGreen(inputConfirmMail);
+                confirmEmailURL = inputConfirmMail.value;
                 break;
             
             case "inputPass":
@@ -310,6 +356,7 @@ window.onload = function(){
                 }
                 removeErrorShowGreen(inputPass);
                 passAlertMsg = inputPass.value;
+                passURL = inputPass.value;
                 break;
             
             case "inputConfirmPass":
@@ -320,12 +367,15 @@ window.onload = function(){
                     return false
                 }
                 removeErrorShowGreen(inputConfirmPass);
+                confirmPassURL = inputConfirmPass.value;
                 break;
             
             default:
                 break;
         }
     }
+
+
 
     inputName.onblur = function () {
         validateInput("inputName");
@@ -414,16 +464,21 @@ window.onload = function(){
         validateInput("inputPass");
         validateInput("inputConfirmPass");
 
-        alert(  "Name: " + nameAlertMsg +
-                "\nSurname: " + surnameAlertMsg +
-                "\nID number: " + idAlertMsg +
-                "\nBirth date: " + dateAlertMsg +
-                "\nPhone number: " + phoneAlertMsg +
-                "\nAddress: " + addressAlertMsg +
-                "\nLocality: " + localityAlertMsg +
-                "\nZip code: " + zipAlertMsg +
-                "\nE-mail: " + emailAlertMsg +
-                "\nPassword: " + passAlertMsg
-        )
+        //if there's an invalid input finish the function before fetching data.
+        if ( nameAlertMsg.includes("ERROR") === true || surnameAlertMsg.includes("ERROR") === true || idAlertMsg.includes("ERROR") === true || dateAlertMsg.includes("ERROR") === true || phoneAlertMsg.includes("ERROR") === true || addressAlertMsg.includes("ERROR") === true || localityAlertMsg.includes("ERROR") === true || zipAlertMsg.includes("ERROR") === true || emailAlertMsg.includes("ERROR") === true || passAlertMsg.includes("ERROR") === true){
+            alert(  "Name: " + nameAlertMsg +
+                    "\nSurname: " + surnameAlertMsg +
+                    "\nID number: " + idAlertMsg +
+                    "\nBirth date: " + dateAlertMsg +
+                    "\nPhone number: " + phoneAlertMsg +
+                    "\nAddress: " + addressAlertMsg +
+                    "\nLocality: " + localityAlertMsg +
+                    "\nZip code: " + zipAlertMsg +
+                    "\nE-mail: " + emailAlertMsg +
+                    "\nPassword: " + passAlertMsg
+            )
+            return 0;
+        }
+        fetchData();
     }
 } 
