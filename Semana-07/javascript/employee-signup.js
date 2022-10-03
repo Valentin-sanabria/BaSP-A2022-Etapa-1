@@ -48,7 +48,6 @@ window.onload = function(){
     var passURL = "";
 
     function saveLocalStorage(data){
-        console.log(data);
         localStorage.setItem("name", data.data.name);
         localStorage.setItem("surname", data.data.lastName);
         localStorage.setItem("id", data.data.dni);
@@ -78,7 +77,7 @@ window.onload = function(){
         inputConfirmPass.value = localStorage.getItem("password");
     }
 
-    function fetchData(){
+    function fetchData() {
         url =   "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+nameURL+
                 "&lastName="+surnameURL+
                 "&email="+emailURL+
@@ -94,7 +93,7 @@ window.onload = function(){
             var data = res.json();
             return data;
             })
-        .then(function (data){
+        .then(function (data) {
             if(data.success === true){
                 modalTitle.innerText ="Request completed succesfully";
                 modalBodyText.innerText = data.msg;
@@ -102,25 +101,27 @@ window.onload = function(){
                 saveLocalStorage(data);
             } else if (data.success === false){
                 modalTitle.innerText = "An error ocurred";
-                modalBodyText.innerText = data.errors[0].msg;
+                modalBodyText.innerText = data.msg;
                 showModal();
             }
         })
-        .catch(function (error){
-            console.log(error);
+        .catch(function (error) {
+            modalTitle.innerText = "An error ocurred";
+            modalBodyText.innerText = error;
+            showModal();
         })
     }
 
-    function checkLength (inputToValidate, minLength, maxLength){
+    function checkLength (inputToValidate, minLength, maxLength) {
         if (inputToValidate.value === "" ){
-            errorMessage = "This input cannot be left blank.";
+            errorMessage = "Inputs cannot be left blank.";
             inputToValidate.classList.add("wrongInput");
             appendErrorMesage(inputToValidate, errorMessage);
             return false;
         }
         if(maxLength === 0){
             if (inputToValidate.value.length < minLength) {
-                errorMessage = "Input should have more than "+ minLength + " characters.";
+                errorMessage = "This input should have more than "+ minLength + " characters.";
                 inputToValidate.classList.add("wrongInput");
                 appendErrorMesage(inputToValidate, errorMessage);
                 return false;
@@ -133,15 +134,20 @@ window.onload = function(){
                 return false;
             }
         }else if (inputToValidate.value.length < minLength || inputToValidate.value.length > maxLength) {
+            if ( minLength === maxLength) {
+                errorMessage = "This input should have " + minLength + " characters.";
+            } else if (minLength != maxLength){
                 errorMessage = "This input should have between "+ minLength + " and " + maxLength + " characters.";
-                inputToValidate.classList.add("wrongInput");
-                appendErrorMesage(inputToValidate, errorMessage);
-                return false;
+            }
+            inputToValidate.classList.add("wrongInput");
+            appendErrorMesage(inputToValidate, errorMessage);
+            return false;
             }
         return true;
     }
 
-    function appendErrorMesage(inputToValidate, errorMessage){
+
+    function appendErrorMesage(inputToValidate, errorMessage) {
         var errorMsg = document.createElement("p");
         errorMsg.classList.add("errorMessage");
         errorMsg.innerText = errorMessage;
@@ -171,12 +177,12 @@ window.onload = function(){
         inputToValidate.classList.add("correctInput");
     }
 
-    function closeModal(){
+    function closeModal() {
         wholeModal.classList.remove("show");
         wholeModal.classList.add("hidden");
     }
 
-    function showModal(){
+    function showModal() {
         wholeModal.classList.remove("hidden");
         wholeModal.classList.add("show");
     }
@@ -256,42 +262,36 @@ window.onload = function(){
 
     function validateAddress(inputToValidate) {
         var address = inputToValidate.value;
-        if (address.indexOf(" ") == -1){
+        if (address.indexOf(" ") == -1) {
             errorMessage = "Separate letters from numbers.";
             redBorder(inputToValidate);
             appendErrorMesage(inputAddress, errorMessage);
-            addressAlertMsg = "ERROR Address is invalid.";
             return false;
         } else{
         
-        // if first char is letter
         if ( address[0].toUpperCase() !== address[0].toLowerCase() ) {
-            //all chars up to blank space should be letter too
+
             for (var i=0; i< address.indexOf(" "); i++){
                 if (address[i].toUpperCase() === address[i].toLowerCase()) {
                     errorMessage = "Separate letters from numbers.";
                     redBorder(inputToValidate);
                     appendErrorMesage(inputAddress, errorMessage);
-                    addressAlertMsg = "ERROR Address is invalid.";
                     return false;
                 }
-
             }
-            //all chars after blank space until end of string should not be letter.
-            for (var i = address.indexOf(" ") ; i < address.length ; i++){
+
+            for (var i = address.indexOf(" ") ; i < address.length ; i++) {
                 if (address[i].toUpperCase() !== address[i].toLowerCase()) {
                     errorMessage = "Separate letters from numbers.";
                     redBorder(inputToValidate);
                     appendErrorMesage(inputAddress, errorMessage);
-                    addressAlertMsg = "ERROR Address is invalid.";
                     return false;
                 }
             }
-        } else { //if first char is NOT letter
+        } else {
             errorMessage = "Address start with street name.";
             redBorder(inputToValidate);
             appendErrorMesage(inputAddress, errorMessage);
-            addressAlertMsg = "ERROR Address is invalid.";
             return false;
         }
         
@@ -303,7 +303,9 @@ window.onload = function(){
         switch (inputToValidate) {            
             case "inputName":
                 if (checkLength(inputName,4,0) === false || onlyLetters(inputName)  === false) {
-                    nameAlertMsg = "ERROR Name is invalid.";
+                    nameAlertMsg = "ERROR";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Name is invalid.";
                     nameURL = inputName.value;
                     return false;
                 }
@@ -314,7 +316,9 @@ window.onload = function(){
             
             case "inputSurname": 
                 if (checkLength(inputSurname,4,0) === false || onlyLetters(inputSurname)  === false) {
-                    surnameAlertMsg = "ERROR Surname is invalid.";
+                    surnameAlertMsg = "ERROR";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Surname is invalid.";
                     surnameURL = inputSurname.value;
                     return false;
                 }
@@ -325,7 +329,9 @@ window.onload = function(){
             
             case "inputId":
                 if (checkLength(inputId,7,0) === false || onlyNumbers(inputId)  === false) {
-                    idAlertMsg = "ERROR ID is invalid.";
+                    idAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "ID is invalid.";
                     idURL = inputId.value;
                     return false;
                 }
@@ -336,7 +342,9 @@ window.onload = function(){
             
             case "inputPhone":
                 if (checkLength(inputPhone,10,10) === false || onlyNumbers(inputPhone)  === false) {
-                    phoneAlertMsg = "ERROR Phone is invalid.";
+                    phoneAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Phone is invalid.";
                     phoneURL = inputPhone.value;
                     return false;
                 }
@@ -347,7 +355,9 @@ window.onload = function(){
             
             case "inputBirth":
                 if (checkLength(inputBirth,10,10) === false || validateBirth() === false) {
-                    dateAlertMsg = "ERROR Date is invalid.";
+                    dateAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Date is invalid.";
                     birthURL = [month, day, year].join('/');
                     return false;
                 }
@@ -359,7 +369,9 @@ window.onload = function(){
             
             case "inputLocality":
                 if (checkLength(inputLocality,4,0) === false || alphaNumeric(inputLocality)  === false) {
-                    localityAlertMsg = "ERROR Locality is invalid.";
+                    localityAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Locality is invalid.";
                     localityURL = inputLocality.value;
                     return false;
                 }
@@ -370,7 +382,9 @@ window.onload = function(){
             
             case "inputZipcode":
                 if (checkLength(inputZipcode,4,5) === false || onlyNumbers(inputZipcode)  === false) {
-                    zipAlertMsg = "ERROR ZIP code is invalid.";
+                    zipAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "ZIP is invalid.";
                     zipURL = inputZipcode.value;
                     return false;
                 }
@@ -381,7 +395,9 @@ window.onload = function(){
             
             case "inputAddress":
                 if (checkLength(inputAddress,5,0) === false || validateAddress(inputAddress)  === false) {
-                    addressAlertMsg = "ERROR Surname is invalid.";
+                    addressAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Address is invalid.";
                     addressURL = inputAddress.value;
                     return false;
                 }
@@ -392,18 +408,23 @@ window.onload = function(){
 
             case "inputMail":
                 if (checkLength(inputMail,6,0) === false) {
-                    emailAlertMsg = "ERROR mail is invalid.";
+                    emailAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Mail is invalid.";
                     return false;
                 }
                 if ( (inputMail.value).search(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/) === -1){
                     errorMessage = "Invalid mail format.";
-                    redBorder(inputConfirmPass);
+                    redBorder(inputMail);
                     appendErrorMesage(inputMail, errorMessage);
-                    emailAlertMsg = "ERROR mail is invalid.";
+                    emailAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Mail is invalid.";
                     emailURL = inputMail.value;
                     return false;
                 }
                 removeErrorShowGreen(inputMail);
+                validateInput("inputConfirmMail");
                 emailAlertMsg = inputMail.value;
                 emailURL = inputMail.value;
                 return true;
@@ -411,6 +432,8 @@ window.onload = function(){
             case "inputConfirmMail":
                 if(inputConfirmMail.value !== inputMail.value){
                     errorMessage = "E-mails are not the same.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = errorMessage;
                     confirmEmailURL = inputConfirmMail.value;
                     redBorder(inputConfirmMail);
                     appendErrorMesage(inputConfirmMail, errorMessage);
@@ -422,18 +445,23 @@ window.onload = function(){
             
             case "inputPass":
                 if (checkLength(inputPass, 8, 0) === false || alphaNumeric(inputPass)  === false){
-                    passAlertMsg = "ERROR Invalid password.";
+                    passAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Password is invalid.";
                     passURL = inputPass.value;
                     return false
                 }
                 removeErrorShowGreen(inputPass);
+                validateInput("inputConfirmPass");
                 passAlertMsg = inputPass.value;
                 passURL = inputPass.value;
                 break;
             
             case "inputConfirmPass":
                 if(inputConfirmPass.value !== inputPass.value){
-                    errorMessage = "Passwords are not the same.";                    
+                    errorMessage = "Passwords are not the same.";  
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Passwords are not the same.";                  
                     redBorder(inputConfirmPass);
                     appendErrorMesage(inputConfirmPass, errorMessage);
                     confirmPassURL = inputConfirmPass.value;
@@ -450,86 +478,111 @@ window.onload = function(){
 
     loadLocalStorage();
 
-    inputName.onblur = function () {
+    inputName.onblur = function() {
         validateInput("inputName");
     }
-    inputSurname.onblur = function () {
+
+    inputSurname.onblur = function() {
         validateInput("inputSurname");
     }
-    inputId.onblur = function () {
+
+    inputId.onblur = function() {
         validateInput("inputId");
     }
-    inputPhone.onblur = function () {
+
+    inputPhone.onblur = function() {
         validateInput("inputPhone");
     }
-    inputBirth.onblur = function () {
+
+    inputBirth.onblur = function() {
         validateInput("inputBirth")
     }
-    inputAddress.onblur = function () {
+
+    inputAddress.onblur = function() {
         validateInput("inputAddress");
     }
-    inputLocality.onblur = function () {
+
+    inputLocality.onblur = function() {
         validateInput("inputLocality");
     }
-    inputZipcode.onblur = function () {
+
+    inputZipcode.onblur = function() {
         validateInput("inputZipcode");
     }
-    inputMail.onblur = function () {
+    
+    inputMail.onblur = function() {
         validateInput("inputMail");
     }
-    inputConfirmMail.onblur = function () {
+
+    inputConfirmMail.onblur = function() {
         validateInput("inputConfirmMail");
     }
-    inputPass.onblur = function () {
+
+    inputPass.onblur = function() {
         validateInput("inputPass");
     }
-    inputConfirmPass.onblur = function () {
+
+    inputConfirmPass.onblur = function() {
         validateInput("inputConfirmPass");
     }
-    inputName.onfocus = function () {
+
+    inputName.onfocus = function() {
         removeClass(inputName);
     } 
-    inputSurname.onfocus = function () {
+
+    inputSurname.onfocus = function() {
         removeClass(inputSurname);
     } 
-    inputId.onfocus = function () {
+
+    inputId.onfocus = function() {
         removeClass(inputId);
     } 
-    inputPhone.onfocus = function () {
+
+    inputPhone.onfocus = function() {
         removeClass(inputPhone);
     } 
-    inputBirth.onfocus = function () {
+
+    inputBirth.onfocus = function() {
         removeClass(inputBirth);
     } 
-    inputAddress.onfocus = function () {
+
+    inputAddress.onfocus = function() {
         removeClass(inputAddress);
     } 
-    inputLocality.onfocus = function () {
+
+    inputLocality.onfocus = function() {
         removeClass(inputLocality);
     } 
-    inputZipcode.onfocus = function () {
+
+    inputZipcode.onfocus = function() {
         removeClass(inputZipcode);
     } 
-    inputMail.onfocus = function () {
+
+    inputMail.onfocus = function() {
         removeClass(inputMail);
     } 
-    inputConfirmMail.onfocus = function () {
+
+    inputConfirmMail.onfocus = function() {
         removeClass(inputId);
     } 
-    inputPass.onfocus = function () {
+
+    inputPass.onfocus = function() {
         removeClass(inputPass);
     }
-    inputConfirmPass.onfocus = function () {
+
+    inputConfirmPass.onfocus = function() {
         removeClass(inputConfirmPass);
     }
+
     btnCloseModal.onclick = function() {
         closeModal();
     }
+    
     understandButton.onclick = function() {
         closeModal();
     }
 
-    signUpButton.onclick = function (){
+    signUpButton.onclick = function() {
         validateInput("inputName");
         validateInput("inputSurname");
         validateInput("inputId");
@@ -543,6 +596,20 @@ window.onload = function(){
         validateInput("inputPass");
         validateInput("inputConfirmPass");
 
+        if (    nameAlertMsg.includes("ERROR") === true ||
+                surnameAlertMsg.includes("ERROR") === true ||
+                idAlertMsg.includes("ERROR") === true ||
+                dateAlertMsg.includes("ERROR") === true ||
+                phoneAlertMsg.includes("ERROR") === true ||
+                addressAlertMsg.includes("ERROR") === true ||
+                localityAlertMsg.includes("ERROR") === true ||
+                zipAlertMsg.includes("ERROR") === true ||
+                emailAlertMsg.includes("ERROR") === true ||
+                passAlertMsg.includes("ERROR") === true) {
+            
+                showModal();
+                return 0;
+        }
         fetchData();
     } 
 } 

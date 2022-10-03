@@ -19,23 +19,23 @@ window.onload = function() {
             return data;
             })
         .then(function (data){
-            console.log(data);
             if(data.success === true){
                 modalTitle.innerText ="Request completed succesfully";
                 modalBodyText.innerText = data.msg;
                 showModal();
-
+            
             } else if (data.success === false){
                 modalTitle.innerText = "An error ocurred";
-                modalBodyText.innerText = data.errors[0].msg;
+                modalBodyText.innerText = data.msg;
                 showModal();
             }
         })
         .catch(function (error){
-            console.log(error);
+            modalTitle.innerText = "An error ocurred";
+            modalBodyText.innerText = error;
+            showModal();
         })        
     }
-
 
     function checkLength (inputToValidate, minLength, maxLength){
         if (inputToValidate.value === "" ){
@@ -59,7 +59,11 @@ window.onload = function() {
                 return false;
             }
         }else if (inputToValidate.value.length < minLength || inputToValidate.value.length > maxLength) {
+            if ( minLength === maxLength) {
+                errorMessage = "This input should have " + minLength + " characters.";
+            } else if (minLength != maxLength){
                 errorMessage = "This input should have between "+ minLength + " and " + maxLength + " characters.";
+            }
                 inputToValidate.classList.add("wrongInput");
                 appendErrorMesage(inputToValidate, errorMessage);
                 return false;
@@ -77,6 +81,11 @@ window.onload = function() {
         } else {
             inputToValidate.parentNode.append(errorMsg);
         }
+    }
+
+    function redBorder(inputToValidate) {
+        inputToValidate.classList.remove("correctInput");
+        inputToValidate.classList.add("wrongInput");
     }
 
     function removeClass(inputToValidate) {
@@ -97,7 +106,8 @@ window.onload = function() {
         var containsNumber = false;
         var containsLetter = false;
         for(var i=0; i<inputValue.length; i++){
-            if( !(inputValue[i].toUpperCase() != inputValue[i].toLowerCase()) && !(Number.isNaN(parseInt(inputValue[i])) === false )) {
+            if( !(inputValue[i].toUpperCase() != inputValue[i].toLowerCase()) &&
+                !(Number.isNaN(parseInt(inputValue[i])) === false )) {
                 errorMessage = "Your input should only have letters and numbers.";
                 inputPass.classList.add("wrongInput");
                 appendErrorMesage(inputToValidate, errorMessage);
@@ -132,14 +142,19 @@ window.onload = function() {
         switch (inputToValidate) {            
             case "inputMail":
                 if (checkLength(inputMail,6,0) === false) {
-                    emailAlertMsg = "ERROR mail is invalid.";
+                    emailAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Mail is invalid.";
                     return false;
                 }
                 if ( (inputMail.value).search(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/) === -1){
                     errorMessage = "Invalid mail format.";
-                    inputMail.classList.add("wrongInput");
+                    redBorder(inputMail);
                     appendErrorMesage(inputMail, errorMessage);
-                    emailAlertMsg = "ERROR mail is invalid.";
+                    emailAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Mail is invalid.";
+                    emailURL = inputMail.value;
                     return false;
                 }
                 removeErrorShowGreen(inputMail);
@@ -149,7 +164,10 @@ window.onload = function() {
             
             case "inputPass":
                 if (checkLength(inputPass, 8, 0) === false || alphaNumeric(inputPass)  === false){
-                    passAlertMsg = "ERROR Passwords is invalid.";
+                    passAlertMsg = "ERROR.";
+                    modalTitle.innerText = "An error ocurred";
+                    modalBodyText.innerText = "Password is invalid.";
+                    passURL = inputPass.value;
                     return false
                 }
                 removeErrorShowGreen(inputPass);
@@ -175,24 +193,32 @@ window.onload = function() {
     inputMail.onblur = function() {
         validateInput("inputMail");
     }
+
     inputMail.onfocus = function () {
         removeClass(inputMail);
-    }    
+    }   
+
     inputPass.onblur = function() {
         validateInput("inputPass");
     }
+
     inputPass.onfocus = function () {
         removeClass(inputPass);
     }    
+    
     btnCloseModal.onclick = function() {
         closeModal();
     }
+
     understandButton.onclick = function() {
         closeModal();
     }
 
     signInBtn.onclick = function (){
+        if (emailAlertMsg.includes("ERROR") === true || passAlertMsg.includes("ERROR") === true){
+            showModal();
+            return 0;
+        }
         fetchData();
     }
 }
-
