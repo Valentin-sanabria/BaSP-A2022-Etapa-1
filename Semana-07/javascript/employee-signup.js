@@ -13,7 +13,15 @@ window.onload = function(){
     var inputPass = document.getElementById("inputPass");
     var inputConfirmPass = document.getElementById("inputConfirmPass");
     var signUpButton = document.getElementById("signUpBtn");
-    //Input's alert msg
+
+    // Modal's vars
+    var wholeModal = document.getElementById("modal");
+    var modalTitle = document.getElementById("modalTitle");
+    var modalBodyText = document.getElementById("modalBodyText");
+    var btnCloseModal = document.getElementById("closeModal");
+    var understandButton = document.getElementById("understandBtn");
+
+    //Input's alert messages
     var errorMessage = "";
     var nameAlertMsg = "";
     var surnameAlertMsg = "";
@@ -25,6 +33,7 @@ window.onload = function(){
     var zipAlertMsg = "";
     var emailAlertMsg = "";
     var passAlertMsg = "";
+    
     //API variables for link creation
     var url = "";
     var nameURL = "";
@@ -70,25 +79,36 @@ window.onload = function(){
     }
 
     function fetchData(){
-        url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+nameURL+"&lastName="+surnameURL+"&email="+emailURL+"&dni="+idURL+"&dob="+birthURL+"&password="+passURL+"&phone="+phoneURL+"&address="+addressURL+"&city="+localityURL+"&zip="+ zipURL;
+        url =   "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+nameURL+
+                "&lastName="+surnameURL+
+                "&email="+emailURL+
+                "&dni="+idURL+
+                "&dob="+birthURL+
+                "&password="+passURL+
+                "&phone="+phoneURL+
+                "&address="+addressURL+
+                "&city="+localityURL+
+                "&zip="+ zipURL;
         fetch(url)
         .then(function (res) {
-            var data = res.json()
+            var data = res.json();
             return data;
             })
         .then(function (data){
-            console.log(data);
             if(data.success === true){
-                alert("Request completed succesfully\n"+ data.msg);
+                modalTitle.innerText ="Request completed succesfully";
+                modalBodyText.innerText = data.msg;
+                showModal();
                 saveLocalStorage(data);
             } else if (data.success === false){
-
-                alert("An error ocurred.\n"+ data.errors[0].msg);
+                modalTitle.innerText = "An error ocurred";
+                modalBodyText.innerText = data.errors[0].msg;
+                showModal();
             }
         })
         .catch(function (error){
             console.log(error);
-        })        
+        })
     }
 
     function checkLength (inputToValidate, minLength, maxLength){
@@ -143,6 +163,24 @@ window.onload = function(){
         inputToValidate.classList.add("wrongInput");
     }
 
+    function removeErrorShowGreen(inputToValidate) {
+        if (inputToValidate.parentNode.children.length > 1  ){
+            inputToValidate.parentNode.children[1].remove();
+        }
+        inputToValidate.classList.remove("wrongInput");
+        inputToValidate.classList.add("correctInput");
+    }
+
+    function closeModal(){
+        wholeModal.classList.remove("show");
+        wholeModal.classList.add("hidden");
+    }
+
+    function showModal(){
+        wholeModal.classList.remove("hidden");
+        wholeModal.classList.add("show");
+    }
+
     function onlyLetters(inputToValidate) {
         for(var i=0; i<inputToValidate.value.length; i++){
             if ( inputToValidate.value[i].toUpperCase() === inputToValidate.value[i].toLowerCase() ) {
@@ -167,20 +205,13 @@ window.onload = function(){
         return true;
     }
 
-    function removeErrorShowGreen(inputToValidate) {
-        if (inputToValidate.parentNode.children.length > 1  ){
-            inputToValidate.parentNode.children[1].remove();
-        }
-        inputToValidate.classList.remove("wrongInput");
-        inputToValidate.classList.add("correctInput");
-    }
-
     function alphaNumeric(inputToValidate) {
         var inputValue = inputToValidate.value;
         var containsNumber = false;
         var containsLetter = false;
         for(var i=0; i<inputValue.length; i++){
-            if( !(inputValue[i].toUpperCase() != inputValue[i].toLowerCase()) && !(Number.isNaN(parseInt(inputValue[i])) === false )) {
+            if( !(inputValue[i].toUpperCase() != inputValue[i].toLowerCase()) &&
+                !(Number.isNaN(parseInt(inputValue[i])) === false )) {
                 errorMessage = "Your input should only have letters and numbers.";
                 redBorder(inputToValidate);
                 appendErrorMesage(inputToValidate, errorMessage);
@@ -273,6 +304,7 @@ window.onload = function(){
             case "inputName":
                 if (checkLength(inputName,4,0) === false || onlyLetters(inputName)  === false) {
                     nameAlertMsg = "ERROR Name is invalid.";
+                    nameURL = inputName.value;
                     return false;
                 }
                 removeErrorShowGreen(inputName);
@@ -283,6 +315,7 @@ window.onload = function(){
             case "inputSurname": 
                 if (checkLength(inputSurname,4,0) === false || onlyLetters(inputSurname)  === false) {
                     surnameAlertMsg = "ERROR Surname is invalid.";
+                    surnameURL = inputSurname.value;
                     return false;
                 }
                 removeErrorShowGreen(inputSurname);
@@ -293,6 +326,7 @@ window.onload = function(){
             case "inputId":
                 if (checkLength(inputId,7,0) === false || onlyNumbers(inputId)  === false) {
                     idAlertMsg = "ERROR ID is invalid.";
+                    idURL = inputId.value;
                     return false;
                 }
                 removeErrorShowGreen(inputId);
@@ -303,6 +337,7 @@ window.onload = function(){
             case "inputPhone":
                 if (checkLength(inputPhone,10,10) === false || onlyNumbers(inputPhone)  === false) {
                     phoneAlertMsg = "ERROR Phone is invalid.";
+                    phoneURL = inputPhone.value;
                     return false;
                 }
                 removeErrorShowGreen(inputPhone);
@@ -313,6 +348,7 @@ window.onload = function(){
             case "inputBirth":
                 if (checkLength(inputBirth,10,10) === false || validateBirth() === false) {
                     dateAlertMsg = "ERROR Date is invalid.";
+                    birthURL = [month, day, year].join('/');
                     return false;
                 }
                 removeErrorShowGreen(inputBirth);
@@ -324,6 +360,7 @@ window.onload = function(){
             case "inputLocality":
                 if (checkLength(inputLocality,4,0) === false || alphaNumeric(inputLocality)  === false) {
                     localityAlertMsg = "ERROR Locality is invalid.";
+                    localityURL = inputLocality.value;
                     return false;
                 }
                 removeErrorShowGreen(inputLocality);
@@ -334,6 +371,7 @@ window.onload = function(){
             case "inputZipcode":
                 if (checkLength(inputZipcode,4,5) === false || onlyNumbers(inputZipcode)  === false) {
                     zipAlertMsg = "ERROR ZIP code is invalid.";
+                    zipURL = inputZipcode.value;
                     return false;
                 }
                 removeErrorShowGreen(inputZipcode);
@@ -344,6 +382,7 @@ window.onload = function(){
             case "inputAddress":
                 if (checkLength(inputAddress,5,0) === false || validateAddress(inputAddress)  === false) {
                     addressAlertMsg = "ERROR Surname is invalid.";
+                    addressURL = inputAddress.value;
                     return false;
                 }
                 removeErrorShowGreen(inputAddress);
@@ -361,6 +400,7 @@ window.onload = function(){
                     redBorder(inputConfirmPass);
                     appendErrorMesage(inputMail, errorMessage);
                     emailAlertMsg = "ERROR mail is invalid.";
+                    emailURL = inputMail.value;
                     return false;
                 }
                 removeErrorShowGreen(inputMail);
@@ -371,7 +411,8 @@ window.onload = function(){
             case "inputConfirmMail":
                 if(inputConfirmMail.value !== inputMail.value){
                     errorMessage = "E-mails are not the same.";
-                    redBorder(inputConfirmPass);
+                    confirmEmailURL = inputConfirmMail.value;
+                    redBorder(inputConfirmMail);
                     appendErrorMesage(inputConfirmMail, errorMessage);
                     return false
                 }
@@ -382,6 +423,7 @@ window.onload = function(){
             case "inputPass":
                 if (checkLength(inputPass, 8, 0) === false || alphaNumeric(inputPass)  === false){
                     passAlertMsg = "ERROR Invalid password.";
+                    passURL = inputPass.value;
                     return false
                 }
                 removeErrorShowGreen(inputPass);
@@ -394,6 +436,7 @@ window.onload = function(){
                     errorMessage = "Passwords are not the same.";                    
                     redBorder(inputConfirmPass);
                     appendErrorMesage(inputConfirmPass, errorMessage);
+                    confirmPassURL = inputConfirmPass.value;
                     return false
                 }
                 removeErrorShowGreen(inputConfirmPass);
@@ -478,7 +521,13 @@ window.onload = function(){
     }
     inputConfirmPass.onfocus = function () {
         removeClass(inputConfirmPass);
-    } 
+    }
+    btnCloseModal.onclick = function() {
+        closeModal();
+    }
+    understandButton.onclick = function() {
+        closeModal();
+    }
 
     signUpButton.onclick = function (){
         validateInput("inputName");
@@ -494,21 +543,6 @@ window.onload = function(){
         validateInput("inputPass");
         validateInput("inputConfirmPass");
 
-        //if there's an invalid input finish the function before fetching data.
-        if ( nameAlertMsg.includes("ERROR") === true || surnameAlertMsg.includes("ERROR") === true || idAlertMsg.includes("ERROR") === true || dateAlertMsg.includes("ERROR") === true || phoneAlertMsg.includes("ERROR") === true || addressAlertMsg.includes("ERROR") === true || localityAlertMsg.includes("ERROR") === true || zipAlertMsg.includes("ERROR") === true || emailAlertMsg.includes("ERROR") === true || passAlertMsg.includes("ERROR") === true){
-            alert(  "Name: " + nameAlertMsg +
-                    "\nSurname: " + surnameAlertMsg +
-                    "\nID number: " + idAlertMsg +
-                    "\nBirth date: " + dateAlertMsg +
-                    "\nPhone number: " + phoneAlertMsg +
-                    "\nAddress: " + addressAlertMsg +
-                    "\nLocality: " + localityAlertMsg +
-                    "\nZip code: " + zipAlertMsg +
-                    "\nE-mail: " + emailAlertMsg +
-                    "\nPassword: " + passAlertMsg
-            )
-            return 0;
-        }
         fetchData();
-    }
+    } 
 } 
