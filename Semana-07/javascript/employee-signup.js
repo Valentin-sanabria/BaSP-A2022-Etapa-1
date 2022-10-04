@@ -58,23 +58,45 @@ window.onload = function(){
         localStorage.setItem("address", data.data.address);
         localStorage.setItem("locality", data.data.city);
         localStorage.setItem("zip", data.data.zip);
+        localStorage.clear();
     }
 
     function loadLocalStorage(){
-        var [month2, day2, year2] = localStorage.getItem("dateBirth").split('/'); 
-        dateAlertMsg = [year2, month2, day2].join('-');
-        inputBirth.value = dateAlertMsg
-        inputName.value = localStorage.getItem("name");
-        inputSurname.value = localStorage.getItem("surname");
-        inputId.value = localStorage.getItem("id");
-        inputPhone.value = localStorage.getItem("phone");
-        inputAddress.value = localStorage.getItem("address");
-        inputLocality.value = localStorage.getItem("locality");
-        inputZipcode.value = localStorage.getItem("zip");
-        inputMail.value = localStorage.getItem("email");
-        inputPass.value = localStorage.getItem("password");
-        inputConfirmMail.value = localStorage.getItem("email");
-        inputConfirmPass.value = localStorage.getItem("password");
+        if (localStorage.getItem("name") !== null) {
+            inputName.value = localStorage.getItem("name");
+        }
+        if (localStorage.getItem("surname") !== null) {
+            inputSurname.value = localStorage.getItem("surname");
+        }
+        if (localStorage.getItem("id") !== null) {
+            inputId.value = localStorage.getItem("id");
+        }
+        if (localStorage.getItem("phone") !== null) {
+            inputPhone.value = localStorage.getItem("phone");
+        }
+        if (localStorage.getItem("address") !== null) {
+            inputAddress.value = localStorage.getItem("address");
+        }
+        if (localStorage.getItem("locality") !== null) {
+            inputLocality.value = localStorage.getItem("locality");
+        }
+        if (localStorage.getItem("zip") !== null) {
+            inputZipcode.value = localStorage.getItem("zip");
+        }
+        if (localStorage.getItem("email") !== null) {
+            inputMail.value = localStorage.getItem("email");
+            inputConfirmMail.value = localStorage.getItem("email");
+        }
+        if (localStorage.getItem("password") !== null) {
+            inputPass.value = localStorage.getItem("password");
+            inputConfirmPass.value = localStorage.getItem("password");
+        }
+        if (localStorage.getItem("dateBirth") !== null) {
+            var [month2, day2, year2] = localStorage.getItem("dateBirth").split('/'); 
+            dateAlertMsg = [year2, month2, day2].join('-');
+            inputBirth.value = dateAlertMsg;
+        }
+        console.log("entre y no rompi nada :)");
     }
 
     function fetchData() {
