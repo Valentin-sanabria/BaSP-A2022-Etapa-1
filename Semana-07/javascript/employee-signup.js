@@ -58,7 +58,6 @@ window.onload = function(){
         localStorage.setItem("address", data.data.address);
         localStorage.setItem("locality", data.data.city);
         localStorage.setItem("zip", data.data.zip);
-        localStorage.clear();
     }
 
     function loadLocalStorage(){
@@ -96,7 +95,6 @@ window.onload = function(){
             dateAlertMsg = [year2, month2, day2].join('-');
             inputBirth.value = dateAlertMsg;
         }
-        console.log("entre y no rompi nada :)");
     }
 
     function fetchData() {
